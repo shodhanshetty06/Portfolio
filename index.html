@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shodhan Kumar Shetty — AI/ML Engineer</title>
+  <meta name="description" content="Shodhan Kumar Shetty — AI & Machine Learning Engineer specializing in LLMs, deep learning, and cloud automation. Building intelligent systems that solve real-world problems." />
+  <meta property="og:title" content="Shodhan Kumar Shetty — AI/ML Engineer" />
+  <meta property="og:description" content="Building intelligent systems that think, learn, and scale." />
+  <meta name="theme-color" content="#060608" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    emailjs.init("I88A6eyYK4uy7lLda"); // Public Key
+  </script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            body: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --accent: #00E5FF;
+      --accent2: #FF4D6D;
+      --accent3: #7FFF00;
+      --bg: #060608;
+      --surface: #0E0E16;
+      --surface2: #13131E;
+      --border: #1E1E30;
+      --text: #EAEAf5;
+      --muted: #6B7080;
+      --card: #0B0B14;
+    }
+    .light-mode {
+      --bg: #F5F5FA;
+      --surface: #FFFFFF;
+      --surface2: #EEEEF5;
+      --border: #DDDDE8;
+      --text: #0E0E1A;
+      --muted: #6B7080;
+      --card: #FFFFFF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      cursor: none;
+    }
+
+    /* ── CUSTOM CURSOR ── */
+    #cursor {
+      position: fixed; width: 12px; height: 12px;
+      background: var(--accent); border-radius: 50%;
+      pointer-events: none; z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: width 0.2s, height 0.2s, opacity 0.2s;
+      mix-blend-mode: screen;
+    }
+    #cursor-ring {
+      position: fixed; width: 38px; height: 38px;
+      border: 1.5px solid var(--accent);
+      border-radius: 50%; pointer-events: none; z-index: 9998;
+      transform: translate(-50%, -50%);
+      transition: transform 0.12s ease, width 0.2s, height 0.2s, opacity 0.3s;
+      opacity: 0.5;
+    }
+    body:hover #cursor { opacity: 1; }
+    .cursor-grow #cursor { width: 22px; height: 22px; }
+    .cursor-grow #cursor-ring { width: 56px; height: 56px; opacity: 0.25; }
+
+    /* ── PROGRESS BAR ── */
+    #progress-bar {
+      position: fixed; top: 0; left: 0; height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      z-index: 1000; width: 0%; transition: width 0.1s linear;
+      box-shadow: 0 0 10px var(--accent);
+    }
+
+    /* ── NOISE GRAIN ── */
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.025; pointer-events: none; z-index: 1;
+    }
+
+    /* ── NAV ── */
+    nav { position: fixed; top: 0; width: 100%; z-index: 500; }
+    .nav-inner {
+      backdrop-filter: blur(20px);
+      background: rgba(6,6,8,0.7);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+    .light-mode .nav-inner { background: rgba(245,245,250,0.75); }
+    .nav-link {
+      position: relative; font-family: 'Outfit', sans-serif;
+      font-size: 0.85rem; font-weight: 500; letter-spacing: 0.02em;
+      color: var(--muted); transition: color 0.2s; text-decoration: none;
+    }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -3px; left: 0; width: 0;
+      height: 1px; background: var(--accent); transition: width 0.25s ease;
+    }
+    .nav-link:hover { color: var(--text); }
+    .nav-link:hover::after { width: 100%; }
+
+    /* ── HERO CANVAS ── */
+    #hero-canvas {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      pointer-events: none; opacity: 0.5;
+    }
+
+    /* ── GLOW TEXT ── */
+    .glow {
+      background: linear-gradient(135deg, #fff 30%, var(--accent) 70%, var(--accent2) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .light-mode .glow {
+      background: linear-gradient(135deg, #0E0E1A 30%, #0099BB 70%, #CC2244 100%);
+      -webkit-background-clip: text; background-clip: text;
+    }
+
+    .accent-text { color: var(--accent); }
+    .accent2-text { color: var(--accent2); }
+
+    /* ── BUTTONS ── */
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 28px; border-radius: 6px;
+      background: var(--accent); color: #000;
+      font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.9rem;
+      letter-spacing: 0.02em; border: none; cursor: none;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      text-decoration: none; position: relative; overflow: hidden;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0,229,255,0.3);
+    }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 28px; border-radius: 6px;
+      background: transparent; color: var(--text);
+      font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.9rem;
+      letter-spacing: 0.02em; border: 1px solid var(--border); cursor: none;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+    .btn-secondary:hover {
+      transform: translateY(-2px); border-color: var(--accent);
+      color: var(--accent); box-shadow: 0 0 20px rgba(0,229,255,0.1);
+    }
+
+    /* ── SKILL PILLS ── */
+    .skill-pill {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 7px 14px; border-radius: 100px;
+      background: var(--surface2); border: 1px solid var(--border);
+      font-size: 0.82rem; font-weight: 500; color: var(--text);
+      transition: border-color 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+      white-space: nowrap;
+    }
+    .skill-pill:hover {
+      border-color: var(--accent); color: var(--accent);
+      transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,229,255,0.12);
+    }
+    .skill-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--accent); display: inline-block; flex-shrink: 0;
+    }
+
+    /* ── PROJECT CARDS ── */
+    .project-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 14px; overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+    .project-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(0,229,255,0.1), 0 0 0 1px rgba(0,229,255,0.15);
+    }
+    .project-card::before {
+      content: ''; position: absolute; inset: 0; border-radius: 14px;
+      background: linear-gradient(135deg, rgba(0,229,255,0.04) 0%, transparent 60%);
+      opacity: 0; transition: opacity 0.3s; pointer-events: none; z-index: 0;
+    }
+    .project-card:hover::before { opacity: 1; }
+    .project-thumb {
+      width: 100%; height: 190px; object-fit: cover;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3.5rem; letter-spacing: -0.02em;
+      position: relative; overflow: hidden;
+    }
+    .tag {
+      display: inline-block; padding: 3px 10px; border-radius: 100px;
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.03em;
+      background: rgba(0,229,255,0.08); color: var(--accent);
+      border: 1px solid rgba(0,229,255,0.2);
+    }
+    .tag-red {
+      background: rgba(255,77,109,0.08); color: var(--accent2);
+      border-color: rgba(255,77,109,0.2);
+    }
+
+    /* ── TIMELINE ── */
+    .timeline-item { position: relative; padding-left: 36px; }
+    .timeline-item::before {
+      content: ''; position: absolute; left: 0; top: 8px;
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--accent); box-shadow: 0 0 10px var(--accent);
+    }
+    .timeline-item::after {
+      content: ''; position: absolute; left: 4.5px; top: 22px;
+      width: 1px; height: calc(100% + 20px);
+      background: linear-gradient(to bottom, var(--accent), transparent);
+      opacity: 0.25;
+    }
+    .timeline-item:last-child::after { display: none; }
+
+    /* ── TESTIMONIAL CARDS ── */
+    .testimonial-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 14px; padding: 28px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .testimonial-card:hover {
+      border-color: rgba(0,229,255,0.3);
+      transform: translateY(-3px);
+    }
+
+    /* ── SECTION LABELS ── */
+    .section-label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--accent);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section-label::before {
+      content: ''; display: inline-block; width: 22px; height: 1px;
+      background: var(--accent);
+    }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left { opacity: 0; transform: translateX(-28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+    .reveal-right { opacity: 0; transform: translateX(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+    /* ── BACK TO TOP ── */
+    #back-to-top {
+      position: fixed; bottom: 28px; right: 28px; z-index: 600;
+      width: 44px; height: 44px; border-radius: 10px;
+      background: var(--surface); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      cursor: none; opacity: 0; transform: translateY(10px);
+      transition: opacity 0.3s, transform 0.3s, border-color 0.2s, box-shadow 0.2s;
+      color: var(--muted);
+    }
+    #back-to-top.visible { opacity: 1; transform: translateY(0); }
+    #back-to-top:hover { border-color: var(--accent); color: var(--accent); box-shadow: 0 4px 20px rgba(0,229,255,0.2); }
+
+    /* ── CONTACT INPUT ── */
+    .input-field {
+      width: 100%; background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 8px; padding: 13px 16px;
+      font-family: 'Outfit', sans-serif; font-size: 0.9rem; color: var(--text);
+      transition: border-color 0.2s, box-shadow 0.2s; outline: none;
+    }
+    .input-field::placeholder { color: var(--muted); }
+    .input-field:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(0,229,255,0.07);
+    }
+
+    /* ── DIVIDER ── */
+    .divider { border: none; border-top: 1px solid var(--border); }
+
+    /* ── AVATAR RING ── */
+    .avatar-ring {
+      position: relative; display: inline-block;
+    }
+    .avatar-ring::after {
+      content: ''; position: absolute; inset: -4px; border-radius: 50%;
+      background: conic-gradient(var(--accent), var(--accent2), var(--accent));
+      z-index: -1; animation: spin 6s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── STATUS BADGE ── */
+    .status-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 6px 14px; border-radius: 100px;
+      background: rgba(0,229,255,0.06); border: 1px solid rgba(0,229,255,0.2);
+      font-size: 0.78rem; font-weight: 500; color: var(--accent);
+    }
+    .status-dot {
+      width: 7px; height: 7px; border-radius: 50%; background: var(--accent);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.4); }
+    }
+
+    /* ── LIGHT MODE OVERRIDES ── */
+    .light-mode { background: var(--bg); color: var(--text); }
+    .light-mode nav .nav-inner { background: rgba(245,245,250,0.8); }
+    .light-mode .project-card { background: var(--surface); }
+    .light-mode .testimonial-card { background: var(--surface2); }
+    .light-mode .skill-pill { background: var(--surface); }
+    .light-mode body::before { opacity: 0.01; }
+
+    /* ── HERO HEADLINE SIZE ── */
+    .hero-headline {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.8rem, 7vw, 6.2rem);
+      font-weight: 800; line-height: 1.03; letter-spacing: -0.03em;
+    }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+    /* ── GRID LINES BACKGROUND ── */
+    .grid-lines {
+      background-image:
+        linear-gradient(rgba(0,229,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,229,255,0.03) 1px, transparent 1px);
+      background-size: 72px 72px;
+    }
+
+    /* ── GLOW ORBS ── */
+    .orb1 {
+      position: absolute; width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,229,255,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .orb2 {
+      position: absolute; width: 400px; height: 400px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,77,109,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      body { cursor: auto; }
+      #cursor, #cursor-ring { display: none; }
+    }
+
+    /* TYPE ANIMATION */
+    .typewriter span { display: inline; }
+    .caret {
+      display: inline-block; width: 3px; height: 1em;
+      background: var(--accent); vertical-align: text-bottom;
+      margin-left: 2px; animation: blink 1s step-end infinite;
+    }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+    /* ── THEME TOGGLE ── */
+    .theme-toggle {
+      width: 40px; height: 22px; border-radius: 11px;
+      background: var(--surface2); border: 1px solid var(--border);
+      position: relative; cursor: none; transition: background 0.3s;
+    }
+    .theme-toggle-thumb {
+      position: absolute; top: 3px; left: 3px;
+      width: 14px; height: 14px; border-radius: 50%;
+      background: var(--accent); transition: transform 0.3s;
+    }
+    .light-mode .theme-toggle-thumb { transform: translateX(18px); }
+
+    /* Floating mobile nav */
+    .mobile-menu {
+      position: fixed; inset: 0; background: rgba(6,6,8,0.95);
+      backdrop-filter: blur(20px); z-index: 490;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 36px;
+      transform: translateY(-100%); transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+    }
+    .mobile-menu.open { transform: translateY(0); }
+    .mobile-menu a {
+      font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 700;
+      color: var(--text); text-decoration: none; letter-spacing: -0.02em;
+      transition: color 0.2s;
+    }
+    .mobile-menu a:hover { color: var(--accent); }
+  </style>
+</head>
+
+<body id="body" class="dark">
+
+  <!-- CURSOR -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- READING PROGRESS -->
+  <div id="progress-bar"></div>
+
+  <!-- BACK TO TOP -->
+  <button id="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#skills" onclick="closeMobileMenu()">Skills</a>
+    <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+    <a href="#experience" onclick="closeMobileMenu()">Experience</a>
+    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="#" style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.05rem;color:var(--text);text-decoration:none;letter-spacing:-0.02em;">
+          SKS<span style="color:var(--accent)"></span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <!-- Theme toggle -->
+          <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+            <div class="theme-toggle-thumb"></div>
+          </button>
+          <!-- Mobile hamburger -->
+          <button class="md:hidden" id="menu-btn" onclick="toggleMobileMenu()" style="background:none;border:none;cursor:none;color:var(--text);" aria-label="Menu">
+            <svg id="menu-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════ HERO ══════════════════════════════════════════════ -->
+  <section id="home" style="min-height:100vh;position:relative;display:flex;align-items:center;padding-top:80px;overflow:hidden;" class="grid-lines">
+    <canvas id="hero-canvas"></canvas>
+    <div class="orb1" style="top:-150px;left:-200px;"></div>
+    <div class="orb2" style="bottom:50px;right:-100px;"></div>
+
+    <div class="max-w-6xl mx-auto px-6 py-20 w-full" style="position:relative;z-index:2;">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-14">
+        <!-- Left -->
+        <div class="flex-1 max-w-2xl">
+          <div class="status-badge mb-7 reveal" style="transition-delay:0.1s">
+            <span class="status-dot"></span>
+            Available for exciting AI/ML projects
+          </div>
+          <h1 class="hero-headline reveal" style="transition-delay:0.2s;">
+            <span class="glow">Shodhan Kumar</span><br/>
+            <span class="glow">Shetty</span>
+          </h1>
+          <div style="margin-top:14px;margin-bottom:8px;" class="reveal" style="transition-delay:0.25s">
+            <span style="font-family:'Syne',sans-serif;font-size:clamp(1rem,2.5vw,1.4rem);font-weight:600;color:var(--muted);">
+              AI / ML Engineer &nbsp;·&nbsp; LLM Architect &nbsp;·&nbsp; Cloud Automator
+            </span>
+          </div>
+          <p class="reveal" style="font-size:1.08rem;color:var(--muted);line-height:1.7;margin-top:18px;margin-bottom:36px;max-width:500px;transition-delay:0.3s;">
+            Building intelligent systems that <span class="accent-text" style="font-weight:600;">think, learn, and scale</span> — from LLM-powered automation pipelines to deep learning solutions deployed on cloud infrastructure.
+          </p>
+          <div class="flex flex-wrap gap-4 reveal" style="transition-delay:0.35s;">
+            <a href="#projects" class="btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              View Projects
+            </a>
+            <a href="assets/resume_shodhan.pdf" target="_blank" class="btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              View CV
+            </a>
+          </div>
+          <!-- Stats row -->
+          <div class="flex gap-10 mt-14 reveal" style="transition-delay:0.4s;">
+            <div>
+              <div style="font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--accent);">6+</div>
+              <div style="font-size:0.8rem;color:var(--muted);margin-top:2px;">Live Projects</div>
+            </div>
+            <div style="width:1px;background:var(--border);"></div>
+            <div>
+              <div style="font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--accent);">10+</div>
+              <div style="font-size:0.8rem;color:var(--muted);margin-top:2px;">Technologies</div>
+            </div>
+            <div style="width:1px;background:var(--border);"></div>
+            <div>
+              <div style="font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--accent);">2+</div>
+              <div style="font-size:0.8rem;color:var(--muted);margin-top:2px;">Years Building</div>
+            </div>
+          </div>
+        </div>
+        <!-- Right — Photo -->
+        <div class="reveal-right" style="flex-shrink:0;transition-delay:0.3s">
+          <div style="position:relative;">
+              <!-- Decorative rings -->
+            <div style="position:absolute;inset:-24px;border-radius:50%;border:1px dashed rgba(0,229,255,0.2);animation:spin 20s linear infinite;pointer-events:none;"></div>
+            <div style="position:absolute;inset:-48px;border-radius:50%;border:1px dashed rgba(255,77,109,0.1);animation:spin 35s linear infinite reverse;pointer-events:none;"></div>
+            <!-- Avatar -->
+            <div style="width:260px;height:260px;border-radius:50%;overflow:hidden;border:2px solid var(--border);position:relative;background:var(--surface2);" id="avatar-container">
+              <!-- Your profile picture -->
+              <img id="avatar-img" src="assets/Profile_pic.jpg" alt="Shodhan Kumar Shetty" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none';document.getElementById('avatar-fallback').style.display='flex'" />
+              <div id="avatar-fallback" style="display:none;width:100%;height:100%;align-items:center;justify-content:center;background:var(--surface2);font-family:'Syne',sans-serif;font-size:4rem;font-weight:800;color:var(--accent);">SK</div>
+            </div>
+            <!-- Accent dots -->
+            <div style="position:absolute;bottom:-14px;right:-10px;width:22px;height:22px;border-radius:50%;background:var(--accent);box-shadow:0 0 20px var(--accent);"></div>
+            <div style="position:absolute;top:-8px;right:20px;width:12px;height:12px;border-radius:50%;background:var(--accent2);box-shadow:0 0 14px var(--accent2);"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ ABOUT ══════════════════════════════════════════════ -->
+  <section id="about" style="padding:120px 0;">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="reveal"><div class="section-label mb-5">About Me</div></div>
+      <div class="flex flex-col lg:flex-row gap-16 items-start">
+        <div class="flex-1">
+          <h2 class="reveal" style="font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.15;letter-spacing:-0.02em;margin-bottom:28px;">
+            Turning complex AI challenges<br/><span class="accent-text">into elegant solutions</span>
+          </h2>
+          <div class="reveal" style="display:flex;flex-direction:column;gap:18px;color:var(--muted);font-size:1.0rem;line-height:1.8;transition-delay:0.1s;">
+            <p>I'm an <strong style="color:var(--text)">AI & Machine Learning graduate</strong> with hands-on experience building real-world AI systems — from OCR pipelines and object detection models to LLM-powered automation tools and cloud-deployed solutions. I bridge the gap between research and production.</p>
+            <p>Currently, I'm working in <strong style="color:var(--text)">cloud operations</strong>, where I'm engineering an intelligent alert-analysis system that uses ML to prioritize incidents, extract insights from logs, and trigger automated workflows — deployed on <span class="accent-text">Google Cloud Run</span>.</p>
+            <p>I believe the best AI solutions are ones that <strong style="color:var(--text)">solve real problems</strong> — not just academic benchmarks. My focus is always on production-ready, scalable systems that create measurable impact.</p>
+          </div>
+        </div>
+        <!-- Highlights -->
+        <div style="width:100%;max-width:340px;flex-shrink:0;" class="reveal-right">
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:20px;">
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.05em;color:var(--muted);text-transform:uppercase;">Key Highlights</div>
+            <hr class="divider"/>
+            <div class="flex flex-col gap-14px">
+              <div class="flex items-start gap-12px" style="gap:12px;margin-bottom:14px;">
+                <div style="width:32px;height:32px;border-radius:8px;background:rgba(0,229,255,0.08);border:1px solid rgba(0,229,255,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent);margin-top:2px;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                </div>
+                <div>
+                  <div style="font-weight:600;font-size:0.88rem;">LLM & GenAI Applications</div>
+                  <div style="font-size:0.78rem;color:var(--muted);margin-top:3px;">Llama 3.1, LangChain, ChromaDB, Streamlit</div>
+                </div>
+              </div>
+              <div class="flex items-start" style="gap:12px;margin-bottom:14px;">
+                <div style="width:32px;height:32px;border-radius:8px;background:rgba(255,77,109,0.08);border:1px solid rgba(255,77,109,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent2);margin-top:2px;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </div>
+                <div>
+                  <div style="font-weight:600;font-size:0.88rem;">Deep Learning & Computer Vision</div>
+                  <div style="font-size:0.78rem;color:var(--muted);margin-top:3px;">TensorFlow, OpenCV, NER, OCR</div>
+                </div>
+              </div>
+              <div class="flex items-start" style="gap:12px;margin-bottom:14px;">
+                <div style="width:32px;height:32px;border-radius:8px;background:rgba(127,255,0,0.06);border:1px solid rgba(127,255,0,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#7FFF00;margin-top:2px;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+                </div>
+                <div>
+                  <div style="font-weight:600;font-size:0.88rem;">Cloud & Automation</div>
+                  <div style="font-size:0.78rem;color:var(--muted);margin-top:3px;">GCP, Cloud Run, Docker, ML Pipelines</div>
+                </div>
+              </div>
+              <div class="flex items-start" style="gap:12px;">
+                <div style="width:32px;height:32px;border-radius:8px;background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent);margin-top:2px;">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </div>
+                <div>
+                  <div style="font-weight:600;font-size:0.88rem;">Full-Stack Development</div>
+                  <div style="font-size:0.78rem;color:var(--muted);margin-top:3px;">MERN Stack, FastAPI, Python backend</div>
+                </div>
+              </div>
+            </div>
+            <hr class="divider"/>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.82rem;color:var(--muted);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Kundapura, India
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ SKILLS ══════════════════════════════════════════════ -->
+  <section id="skills" style="padding:120px 0;background:var(--surface);">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="reveal"><div class="section-label mb-5">Expertise</div></div>
+      <h2 class="reveal" style="font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:14px;line-height:1.15;transition-delay:0.1s;">The stack behind<br/><span class="accent-text">every solution</span></h2>
+      <p class="reveal" style="color:var(--muted);font-size:1rem;margin-bottom:64px;max-width:500px;transition-delay:0.15s;">From neural networks to cloud deployments — tools I use to build intelligent, production-ready systems.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <!-- Card: AI/ML -->
+        <div class="reveal project-card p-6" style="transition-delay:0.1s;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+            <div style="width:36px;height:36px;border-radius:9px;background:rgba(0,229,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--accent);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            </div>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">AI & Machine Learning</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span class="skill-pill"><span class="skill-dot"></span>TensorFlow</span>
+            <span class="skill-pill"><span class="skill-dot"></span>PyTorch</span>
+            <span class="skill-pill"><span class="skill-dot"></span>Scikit-learn</span>
+            <span class="skill-pill"><span class="skill-dot"></span>OpenCV</span>
+            <span class="skill-pill"><span class="skill-dot"></span>CUDA</span>
+            <span class="skill-pill"><span class="skill-dot"></span>NER / NLP</span>
+            <span class="skill-pill"><span class="skill-dot"></span>OCR</span>
+          </div>
+        </div>
+        <!-- Card: LLMs -->
+        <div class="reveal project-card p-6" style="transition-delay:0.15s;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+            <div style="width:36px;height:36px;border-radius:9px;background:rgba(255,77,109,0.1);display:flex;align-items:center;justify-content:center;color:var(--accent2);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">LLMs & Generative AI</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span class="skill-pill" style="border-color:rgba(255,77,109,0.2);"><span style="background:var(--accent2);" class="skill-dot"></span>Llama 3.1</span>
+            <span class="skill-pill" style="border-color:rgba(255,77,109,0.2);"><span style="background:var(--accent2);" class="skill-dot"></span>LangChain</span>
+            <span class="skill-pill" style="border-color:rgba(255,77,109,0.2);"><span style="background:var(--accent2);" class="skill-dot"></span>ChromaDB</span>
+            <span class="skill-pill" style="border-color:rgba(255,77,109,0.2);"><span style="background:var(--accent2);" class="skill-dot"></span>Transformers</span>
+            <span class="skill-pill" style="border-color:rgba(255,77,109,0.2);"><span style="background:var(--accent2);" class="skill-dot"></span>Prompt Eng.</span>
+            <span class="skill-pill" style="border-color:rgba(255,77,109,0.2);"><span style="background:var(--accent2);" class="skill-dot"></span>RAG Pipelines</span>
+          </div>
+        </div>
+        <!-- Card: Cloud -->
+        <div class="reveal project-card p-6" style="transition-delay:0.2s;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+            <div style="width:36px;height:36px;border-radius:9px;background:rgba(127,255,0,0.08);display:flex;align-items:center;justify-content:center;color:#7FFF00;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            </div>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">Cloud & DevOps</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span class="skill-pill" style="border-color:rgba(127,255,0,0.2);"><span style="background:#7FFF00;" class="skill-dot"></span>Google Cloud</span>
+            <span class="skill-pill" style="border-color:rgba(127,255,0,0.2);"><span style="background:#7FFF00;" class="skill-dot"></span>Cloud Run</span>
+            <span class="skill-pill" style="border-color:rgba(127,255,0,0.2);"><span style="background:#7FFF00;" class="skill-dot"></span>Docker</span>
+            <span class="skill-pill" style="border-color:rgba(127,255,0,0.2);"><span style="background:#7FFF00;" class="skill-dot"></span>CI/CD</span>
+            <span class="skill-pill" style="border-color:rgba(127,255,0,0.2);"><span style="background:#7FFF00;" class="skill-dot"></span>Automation</span>
+          </div>
+        </div>
+        <!-- Card: Languages -->
+        <div class="reveal project-card p-6" style="transition-delay:0.25s;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+            <div style="width:36px;height:36px;border-radius:9px;background:rgba(0,229,255,0.08);display:flex;align-items:center;justify-content:center;color:var(--accent);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">Languages & Frameworks</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span class="skill-pill"><span class="skill-dot"></span>Python</span>
+            <span class="skill-pill"><span class="skill-dot"></span>JavaScript</span>
+            <span class="skill-pill"><span class="skill-dot"></span>Node.js</span>
+            <span class="skill-pill"><span class="skill-dot"></span>FastAPI</span>
+            <span class="skill-pill"><span class="skill-dot"></span>Streamlit</span>
+            <span class="skill-pill"><span class="skill-dot"></span>React</span>
+          </div>
+        </div>
+        <!-- Card: Databases -->
+        <div class="reveal project-card p-6" style="transition-delay:0.3s;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+            <div style="width:36px;height:36px;border-radius:9px;background:rgba(255,77,109,0.08);display:flex;align-items:center;justify-content:center;color:var(--accent2);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">Databases & Storage</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span class="skill-pill" style="border-color:rgba(255,77,109,0.2);"><span style="background:var(--accent2);" class="skill-dot"></span>MongoDB</span>
+            <span class="skill-pill" style="border-color:rgba(255,77,109,0.2);"><span style="background:var(--accent2);" class="skill-dot"></span>PostgreSQL</span>
+            <span class="skill-pill" style="border-color:rgba(255,77,109,0.2);"><span style="background:var(--accent2);" class="skill-dot"></span>ChromaDB</span>
+            <span class="skill-pill" style="border-color:rgba(255,77,109,0.2);"><span style="background:var(--accent2);" class="skill-dot"></span>Vector DBs</span>
+          </div>
+        </div>
+        <!-- Card: Tools -->
+        <div class="reveal project-card p-6" style="transition-delay:0.35s;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+            <div style="width:36px;height:36px;border-radius:9px;background:rgba(127,255,0,0.06);display:flex;align-items:center;justify-content:center;color:#7FFF00;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">Tools & Workflow</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span class="skill-pill" style="border-color:rgba(127,255,0,0.2);"><span style="background:#7FFF00;" class="skill-dot"></span>Git / GitHub</span>
+            <span class="skill-pill" style="border-color:rgba(127,255,0,0.2);"><span style="background:#7FFF00;" class="skill-dot"></span>Jupyter</span>
+            <span class="skill-pill" style="border-color:rgba(127,255,0,0.2);"><span style="background:#7FFF00;" class="skill-dot"></span>VS Code</span>
+            <span class="skill-pill" style="border-color:rgba(127,255,0,0.2);"><span style="background:#7FFF00;" class="skill-dot"></span>Postman</span>
+            <span class="skill-pill" style="border-color:rgba(127,255,0,0.2);"><span style="background:#7FFF00;" class="skill-dot"></span>Linux</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ PROJECTS ══════════════════════════════════════════════ -->
+  <section id="projects" style="padding:120px 0;">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="reveal"><div class="section-label mb-5">Featured Projects</div></div>
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+        <h2 class="reveal" style="font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.02em;line-height:1.15;transition-delay:0.1s;">
+          Things I've<br/><span class="accent-text">built & shipped</span>
+        </h2>
+        <a href="https://github.com/shodhanshetty06" target="_blank" class="btn-secondary reveal" style="transition-delay:0.15s;align-self:flex-start;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub Profile
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+
+        <!-- Project 1: Gmail Automation -->
+        <div class="project-card reveal" style="transition-delay:0.1s;">
+          <div class="project-thumb" style="background:linear-gradient(135deg,#0d1a2e 0%,#0a2540 60%,#0e3a5c 100%);">
+            <span style="font-size:3rem;">✉️</span>
+            <div style="position:absolute;bottom:14px;left:14px;display:flex;gap:6px;flex-wrap:wrap;">
+              <span class="tag">ML</span><span class="tag">Cloud</span><span class="tag">Automation</span>
+            </div>
+            <div style="position:absolute;top:14px;right:14px;padding:4px 9px;border-radius:6px;background:rgba(0,229,255,0.12);font-size:0.7rem;font-weight:600;color:var(--accent);border:1px solid rgba(0,229,255,0.2);">2026</div>
+          </div>
+          <div style="padding:22px;position:relative;z-index:1;">
+            <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.08rem;margin-bottom:8px;">Gmail Automation System</h3>
+            <p style="font-size:0.85rem;color:var(--muted);line-height:1.65;margin-bottom:18px;">Intelligent ML-powered automation system that analyzes cloud alerts, prioritizes incidents, extracts log insights, and triggers automated workflows integrated with Gmail and ticketing tools.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;">
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Python</span>
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">ML</span>
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">GCP</span>
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Cloud Run</span>
+            </div>
+            <div style="display:flex;gap:12px;">
+              <a href="https://github.com/shodhanshetty06/N8n-Automations/tree/master/Gmail%20Automation" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--accent);text-decoration:none;font-weight:600;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Cold Email Generator -->
+        <div class="project-card reveal" style="transition-delay:0.15s;">
+          <div class="project-thumb" style="background:linear-gradient(135deg,#1a0d2e 0%,#280a40 60%,#3d0e5c 100%);">
+            <span style="font-size:3rem;">🤖</span>
+            <div style="position:absolute;bottom:14px;left:14px;display:flex;gap:6px;flex-wrap:wrap;">
+              <span class="tag tag-red">LLM</span><span class="tag tag-red">GenAI</span><span class="tag">RAG</span>
+            </div>
+            <div style="position:absolute;top:14px;right:14px;padding:4px 9px;border-radius:6px;background:rgba(255,77,109,0.12);font-size:0.7rem;font-weight:600;color:var(--accent2);border:1px solid rgba(255,77,109,0.2);">2024</div>
+          </div>
+          <div style="padding:22px;position:relative;z-index:1;">
+            <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.08rem;margin-bottom:8px;">Cold Email Generator</h3>
+            <p style="font-size:0.85rem;color:var(--muted);line-height:1.65;margin-bottom:18px;">GenAI-powered tool using Llama 3.1 + LangChain that scrapes job postings and auto-generates personalized cold emails with relevant portfolio links fetched from ChromaDB vector store.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;">
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Llama 3.1</span>
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">LangChain</span>
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">ChromaDB</span>
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Streamlit</span>
+            </div>
+            <div style="display:flex;gap:12px;">
+              <a href="https://github.com/shodhanshetty06/MyProjects/tree/main/Cold%20Email%20Generator" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--accent);text-decoration:none;font-weight:600;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Finance Expense Tracker -->
+        <div class="project-card reveal" style="transition-delay:0.2s;">
+          <div class="project-thumb" style="background:linear-gradient(135deg,#0a1f0d 0%,#0d3015 60%,#103d18 100%);">
+            <span style="font-size:3rem;">💰</span>
+            <div style="position:absolute;bottom:14px;left:14px;display:flex;gap:6px;flex-wrap:wrap;">
+              <span class="tag">MERN</span><span class="tag">Full-Stack</span>
+            </div>
+            <div style="position:absolute;top:14px;right:14px;padding:4px 9px;border-radius:6px;background:rgba(127,255,0,0.1);font-size:0.7rem;font-weight:600;color:#7FFF00;border:1px solid rgba(127,255,0,0.2);">2025</div>
+          </div>
+          <div style="padding:22px;position:relative;z-index:1;">
+            <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.08rem;margin-bottom:8px;">Finance Expense Tracker</h3>
+            <p style="font-size:0.85rem;color:var(--muted);line-height:1.65;margin-bottom:18px;">Web-based finance tracker built during MERN stack internship. Features real-time expense categorization, data visualization dashboards, and robust data handling for personal finance management.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;">
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">MongoDB</span>
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Express</span>
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">React</span>
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Node.js</span>
+            </div>
+            <div style="display:flex;gap:12px;">
+              <a href="https://github.com/shodhanshetty06" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--accent);text-decoration:none;font-weight:600;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Object Detection -->
+        <div class="project-card reveal" style="transition-delay:0.25s;">
+          <div class="project-thumb" style="background:linear-gradient(135deg,#1a0d0d 0%,#2e1010 60%,#3d1414 100%);">
+            <span style="font-size:3rem;">👁️</span>
+            <div style="position:absolute;bottom:14px;left:14px;display:flex;gap:6px;flex-wrap:wrap;">
+              <span class="tag tag-red">Deep Learning</span><span class="tag">CV</span>
+            </div>
+            <div style="position:absolute;top:14px;right:14px;padding:4px 9px;border-radius:6px;background:rgba(255,77,109,0.12);font-size:0.7rem;font-weight:600;color:var(--accent2);border:1px solid rgba(255,77,109,0.2);">2024</div>
+          </div>
+          <div style="padding:22px;position:relative;z-index:1;">
+            <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.08rem;margin-bottom:8px;">Object Detection with TensorFlow</h3>
+            <p style="font-size:0.85rem;color:var(--muted);line-height:1.65;margin-bottom:18px;">Real-time object detection system built using TensorFlow and OpenCV. Implements custom-trained models for accurate multi-class detection with optimized inference pipeline for production use.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;">
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">TensorFlow</span>
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">OpenCV</span>
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Python</span>
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">CUDA</span>
+            </div>
+            <a href="https://github.com/shodhanshetty06/MyProjects/tree/main/Object%20Detection%20Using%20Tensorflow" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--accent);text-decoration:none;font-weight:600;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 5: News Summarization -->
+        <div class="project-card reveal" style="transition-delay:0.3s;">
+          <div class="project-thumb" style="background:linear-gradient(135deg,#0a0d1f 0%,#0d1540 60%,#101a5c 100%);">
+            <span style="font-size:3rem;">📰</span>
+            <div style="position:absolute;bottom:14px;left:14px;display:flex;gap:6px;flex-wrap:wrap;">
+              <span class="tag">NLP</span><span class="tag">Transformers</span>
+            </div>
+            <div style="position:absolute;top:14px;right:14px;padding:4px 9px;border-radius:6px;background:rgba(0,229,255,0.12);font-size:0.7rem;font-weight:600;color:var(--accent);border:1px solid rgba(0,229,255,0.2);">2024</div>
+          </div>
+          <div style="padding:22px;position:relative;z-index:1;">
+            <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.08rem;margin-bottom:8px;">News Summarization Engine</h3>
+            <p style="font-size:0.85rem;color:var(--muted);line-height:1.65;margin-bottom:18px;">NLP-powered news summarization tool using transformer models to extract key insights and generate concise summaries from large volumes of news articles automatically.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;">
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Transformers</span>
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">NLP</span>
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Python</span>
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">BERT</span>
+            </div>
+            <a href="https://github.com/shodhanshetty06/MyProjects/tree/main/News%20Summarization" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--accent);text-decoration:none;font-weight:600;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ EXPERIENCE ══════════════════════════════════════════════ -->
+  <section id="experience" style="padding:120px 0;background:var(--surface);">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="reveal"><div class="section-label mb-5">Experience</div></div>
+      <h2 class="reveal" style="font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:64px;line-height:1.15;transition-delay:0.1s;">
+        The journey so far<span style="color:var(--accent)">.</span>
+      </h2>
+
+      <div style="display:flex;flex-direction:column;gap:42px;max-width:750px;">
+
+        <!-- Experience 1 -->
+        <div class="timeline-item reveal" style="transition-delay:0.1s;">
+          <div style="background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:26px;transition:border-color 0.2s;" class="exp-card">
+            <div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:12px;">
+              <div>
+                <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;">Cloud Operations Engineer</div>
+                <div style="color:var(--accent);font-size:0.88rem;font-weight:600;margin-top:4px;">Current Employment &nbsp;·&nbsp; Bengaluru, India</div>
+              </div>
+              <div style="padding:4px 12px;border-radius:100px;background:rgba(0,229,255,0.08);border:1px solid rgba(0,229,255,0.2);font-size:0.75rem;font-weight:600;color:var(--accent);white-space:nowrap;">Feb 2026 — Present</div>
+            </div>
+            <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;margin-bottom:16px;">Engineering an ML-powered intelligent alert analysis system that prioritizes cloud incidents, extracts actionable insights from logs, and triggers automated remediation workflows. System designed for deployment on Google Cloud Run with integrations to ticketing tools.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+              <span class="tag">ML</span><span class="tag">GCP</span><span class="tag">Cloud Run</span><span class="tag">Automation</span><span class="tag">Python</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline-item reveal" style="transition-delay:0.15s;">
+          <div style="background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:26px;" class="exp-card">
+            <div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:12px;">
+              <div>
+                <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;">Full-Stack Developer Intern</div>
+                <div style="color:var(--muted);font-size:0.88rem;font-weight:600;margin-top:4px;">MERN Stack Internship &nbsp;·&nbsp; Remote</div>
+              </div>
+              <div style="padding:4px 12px;border-radius:100px;background:var(--surface);border:1px solid var(--border);font-size:0.75rem;font-weight:600;color:var(--muted);white-space:nowrap;">2025</div>
+            </div>
+            <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;margin-bottom:16px;">Developed a production-ready web-based Finance Expense Tracker with real-time data management, expense categorization, and interactive dashboards. Focused on real-world usability, RESTful API design, and scalable MongoDB data handling.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+              <span class="tag">MongoDB</span><span class="tag">Express.js</span><span class="tag">React</span><span class="tag">Node.js</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="timeline-item reveal" style="transition-delay:0.2s;">
+          <div style="background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:26px;" class="exp-card">
+            <div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:12px;">
+              <div>
+                <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;">B.E. — Artificial Intelligence & Machine Learning</div>
+                <div style="color:var(--muted);font-size:0.88rem;font-weight:600;margin-top:4px;">University, Bengaluru, India</div>
+              </div>
+              <div style="padding:4px 12px;border-radius:100px;background:var(--surface);border:1px solid var(--border);font-size:0.75rem;font-weight:600;color:var(--muted);white-space:nowrap;">2020 — 2024</div>
+            </div>
+            <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;margin-bottom:16px;">Specialized in machine learning, deep learning architectures, and intelligent systems. Built multiple real-world AI projects spanning computer vision, NLP, and cloud-based automation throughout the program.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+              <span class="tag">AI/ML</span><span class="tag">Deep Learning</span><span class="tag">Computer Vision</span><span class="tag">NLP</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ TESTIMONIALS ══════════════════════════════════════════════ -->
+  <section id="testimonials" style="padding:120px 0;">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="reveal"><div class="section-label mb-5">Testimonials</div></div>
+      <h2 class="reveal" style="font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:64px;line-height:1.15;transition-delay:0.1s;">
+        What people<br/><span class="accent-text">say about working with me</span>
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="testimonial-card reveal" style="transition-delay:0.1s;">
+          <div style="color:var(--accent);font-size:1.6rem;line-height:1;margin-bottom:16px;font-family:'Syne',sans-serif;">"</div>
+          <p style="font-size:0.88rem;color:var(--muted);line-height:1.75;margin-bottom:22px;">Shodhan's ability to take a complex AI requirement and deliver a working, production-ready solution is remarkable. The LLM-based automation he built for us saved hours of manual work every week.</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;color:#000;flex-shrink:0;">RM</div>
+            <div>
+              <div style="font-weight:600;font-size:0.85rem;">Rahul M.</div>
+              <div style="font-size:0.75rem;color:var(--muted);">Senior Engineer, Cloud Ops</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal" style="transition-delay:0.15s;">
+          <div style="color:var(--accent2);font-size:1.6rem;line-height:1;margin-bottom:16px;font-family:'Syne',sans-serif;">"</div>
+          <p style="font-size:0.88rem;color:var(--muted);line-height:1.75;margin-bottom:22px;">Working with Shodhan on the MERN project was a great experience. He's fast, thorough, and always thinks about the end user. The expense tracker he built was clean, intuitive, and exactly what we needed.</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#7FFF00,var(--accent));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;color:#000;flex-shrink:0;">PK</div>
+            <div>
+              <div style="font-weight:600;font-size:0.85rem;">Priya K.</div>
+              <div style="font-size:0.75rem;color:var(--muted);">Internship Mentor, Full-Stack</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal" style="transition-delay:0.2s;">
+          <div style="color:#7FFF00;font-size:1.6rem;line-height:1;margin-bottom:16px;font-family:'Syne',sans-serif;">"</div>
+          <p style="font-size:0.88rem;color:var(--muted);line-height:1.75;margin-bottom:22px;">Shodhan demonstrates exceptional problem-solving skills in AI. His object detection project showed deep understanding of both theory and practical implementation. A developer who truly understands the full stack of AI systems.</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--accent2),#7FFF00);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;color:#000;flex-shrink:0;">AS</div>
+            <div>
+              <div style="font-weight:600;font-size:0.85rem;">Dr. Anita S.</div>
+              <div style="font-size:0.75rem;color:var(--muted);">Professor, AI/ML Dept.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ CONTACT ══════════════════════════════════════════════ -->
+  <section id="contact" style="padding:120px 0;background:var(--surface);">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="reveal"><div class="section-label mb-5">Get In Touch</div></div>
+      <div class="flex flex-col lg:flex-row gap-16">
+        <div class="flex-1">
+          <h2 class="reveal" style="font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.02em;line-height:1.15;margin-bottom:20px;transition-delay:0.1s;">
+            Let's build something<br/><span class="accent-text">remarkable together</span>
+          </h2>
+          <p class="reveal" style="color:var(--muted);font-size:1rem;line-height:1.75;max-width:440px;margin-bottom:42px;transition-delay:0.15s;">
+            I'm actively looking to collaborate on AI/ML projects, automation systems, and intelligent applications. Whether it's a freelance gig, full-time role, or just a chat about ideas — I'm all ears.
+          </p>
+          <!-- Direct contact links -->
+          <div class="reveal flex flex-col gap-4" style="transition-delay:0.2s;">
+            <a href="mailto:shodhanshetty66@gmail.com" style="display:inline-flex;align-items:center;gap:12px;color:var(--text);text-decoration:none;font-size:0.9rem;font-weight:500;group;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">
+              <div style="width:36px;height:36px;border-radius:9px;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              shodhanshetty66@gmail.com
+            </a>
+            <a href="https://linkedin.com/in/shodhan-shetty06/" target="_blank" style="display:inline-flex;align-items:center;gap:12px;color:var(--text);text-decoration:none;font-size:0.9rem;font-weight:500;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">
+              <div style="width:36px;height:36px;border-radius:9px;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              linkedin.com/in/shodhan-shetty06
+            </a>
+            <a href="https://github.com/shodhanshetty06" target="_blank" style="display:inline-flex;align-items:center;gap:12px;color:var(--text);text-decoration:none;font-size:0.9rem;font-weight:500;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">
+              <div style="width:36px;height:36px;border-radius:9px;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </div>
+              github.com/shodhanshetty06
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="flex-1 reveal-right">
+          <form id="contact-form" onsubmit="handleSubmit(event)" style="display:flex;flex-direction:column;gap:18px;">
+            <div class="flex flex-col sm:flex-row gap-4">
+              <div style="flex:1;">
+                <label style="display:block;font-size:0.8rem;font-weight:600;margin-bottom:7px;color:var(--muted);letter-spacing:0.03em;">YOUR NAME</label>
+                <input type="text" class="input-field" name="from_name" placeholder="Jane Doe" required />
+              </div>
+              <div style="flex:1;">
+                <label style="display:block;font-size:0.8rem;font-weight:600;margin-bottom:7px;color:var(--muted);letter-spacing:0.03em;">EMAIL</label>
+                <input type="email" class="input-field" name="from_email" placeholder="jane@company.com" required />
+              </div>
+            </div>
+            <div>
+              <label style="display:block;font-size:0.8rem;font-weight:600;margin-bottom:7px;color:var(--muted);letter-spacing:0.03em;">SUBJECT</label>
+              <input type="text" class="input-field" name="subject" placeholder="Let's build an AI system..." required />
+            </div>
+            <div>
+              <label style="display:block;font-size:0.8rem;font-weight:600;margin-bottom:7px;color:var(--muted);letter-spacing:0.03em;">MESSAGE</label>
+              <textarea class="input-field" name="message" rows="5" placeholder="Tell me about your project or idea..." required style="resize:vertical;"></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="justify-content:center;font-size:0.95rem;padding:14px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message
+            </button>
+            <div id="form-success" style="display:none;text-align:center;padding:14px;border-radius:8px;background:rgba(0,229,255,0.08);border:1px solid rgba(0,229,255,0.2);color:var(--accent);font-size:0.88rem;font-weight:600;">
+              ✓ Message sent! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ FOOTER ══════════════════════════════════════════════ -->
+  <footer style="padding:42px 0;border-top:1px solid var(--border);">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:var(--text);">
+          SKS<span style="color:var(--accent)"></span>
+        </div>
+        <div style="font-size:0.82rem;color:var(--muted);text-align:center;">
+          Designed & Engineered by Shodhan Kumar Shetty &nbsp;·&nbsp; Kundapura, India &nbsp;·&nbsp; 
+        </div>
+        <div style="display:flex;gap:16px;">
+          <a href="https://github.com/shodhanshetty06" target="_blank" style="color:var(--muted);transition:color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/shodhan-shetty06/" target="_blank" style="color:var(--muted);transition:color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════ SCRIPTS ══════════════════════════════════════════════ -->
+  <script>
+    // ── CURSOR ──
+    const cursor = document.getElementById('cursor');
+    const ring = document.getElementById('cursor-ring');
+    let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+    document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
+    function animateCursor() {
+      cursor.style.left = mouseX + 'px'; cursor.style.top = mouseY + 'px';
+      ringX += (mouseX - ringX) * 0.12; ringY += (mouseY - ringY) * 0.12;
+      ring.style.left = ringX + 'px'; ring.style.top = ringY + 'px';
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+    document.querySelectorAll('a, button, .btn-primary, .btn-secondary, .project-card, .skill-pill, input, textarea').forEach(el => {
+      el.addEventListener('mouseenter', () => document.body.classList.add('cursor-grow'));
+      el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-grow'));
+    });
+
+    // ── PROGRESS BAR ──
+    window.addEventListener('scroll', () => {
+      const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+      const btt = document.getElementById('back-to-top');
+      window.scrollY > 400 ? btt.classList.add('visible') : btt.classList.remove('visible');
+    });
+
+    // ── SCROLL REVEAL ──
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
+
+    // ── THEME TOGGLE ──
+    function toggleTheme() {
+      const body = document.getElementById('body');
+      const html = document.documentElement;
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        body.classList.add('light-mode');
+      } else {
+        html.classList.add('dark');
+        body.classList.remove('light-mode');
+      }
+    }
+
+    // ── MOBILE MENU ──
+    let menuOpen = false;
+    function toggleMobileMenu() {
+      menuOpen = !menuOpen;
+      document.getElementById('mobile-menu').classList.toggle('open', menuOpen);
+    }
+    function closeMobileMenu() {
+      menuOpen = false;
+      document.getElementById('mobile-menu').classList.remove('open');
+    }
+
+    // ── CONTACT FORM ──
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="animation:spin 1s linear infinite"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg> Sending...';
+      btn.disabled = true;
+
+      const templateParams = {
+        from_name:  e.target.from_name.value,
+        from_email: e.target.from_email.value,
+        subject:    e.target.subject.value,
+        message:    e.target.message.value,
+      };
+
+      console.log('📧 Sending email:', templateParams);
+
+      emailjs.send("service_sjyq8gi", "template_8wqz66m", templateParams)
+        .then(() => {
+          console.log('✅ Email sent successfully!');
+          document.getElementById('form-success').style.display = 'block';
+          e.target.reset();
+          btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message';
+          btn.disabled = false;
+          setTimeout(() => {
+            document.getElementById('form-success').style.display = 'none';
+          }, 5000);
+        })
+        .catch((err) => {
+          console.error('❌ Email send failed:', err);
+          alert('⚠️ Failed to send: ' + JSON.stringify(err));
+          btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message';
+          btn.disabled = false;
+        });
+    }
+
+    // ── HERO CANVAS — Neural Network Animation ──
+    (function() {
+      const canvas = document.getElementById('hero-canvas');
+      const ctx = canvas.getContext('2d');
+      let W, H, nodes = [], animFrame;
+      const isDark = () => document.documentElement.classList.contains('dark');
+
+      function resize() {
+        W = canvas.width = canvas.offsetWidth;
+        H = canvas.height = canvas.offsetHeight;
+      }
+
+      function initNodes() {
+        nodes = [];
+        const count = Math.min(60, Math.floor(W * H / 14000));
+        for (let i = 0; i < count; i++) {
+          nodes.push({
+            x: Math.random() * W, y: Math.random() * H,
+            vx: (Math.random() - 0.5) * 0.4, vy: (Math.random() - 0.5) * 0.4,
+            r: Math.random() * 2 + 1
+          });
+        }
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+        const nodeColor = isDark() ? 'rgba(0,229,255,' : 'rgba(0,150,170,';
+        const lineColor = isDark() ? 'rgba(0,229,255,' : 'rgba(0,150,170,';
+
+        // update
+        nodes.forEach(n => {
+          n.x += n.vx; n.y += n.vy;
+          if (n.x < 0 || n.x > W) n.vx *= -1;
+          if (n.y < 0 || n.y > H) n.vy *= -1;
+        });
+
+        // lines
+        for (let i = 0; i < nodes.length; i++) {
+          for (let j = i + 1; j < nodes.length; j++) {
+            const dx = nodes[i].x - nodes[j].x, dy = nodes[i].y - nodes[j].y;
+            const dist = Math.sqrt(dx*dx + dy*dy);
+            if (dist < 130) {
+              ctx.beginPath();
+              ctx.moveTo(nodes[i].x, nodes[i].y);
+              ctx.lineTo(nodes[j].x, nodes[j].y);
+              ctx.strokeStyle = lineColor + (0.15 * (1 - dist/130)) + ')';
+              ctx.lineWidth = 0.7;
+              ctx.stroke();
+            }
+          }
+        }
+
+        // dots
+        nodes.forEach(n => {
+          ctx.beginPath();
+          ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+          ctx.fillStyle = nodeColor + '0.6)';
+          ctx.fill();
+        });
+
+        animFrame = requestAnimationFrame(draw);
+      }
+
+      window.addEventListener('resize', () => { resize(); initNodes(); });
+      resize(); initNodes(); draw();
+    })();
+
+    // ── STAGGER ANIMATION on load ──
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach((el, i) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight) el.classList.add('visible');
+        });
+      }, 100);
+    });
+  </script>
+</body>
+</html>
