@@ -5,33 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shodhan Kumar Shetty — AI/ML Engineer</title>
   <meta name="description" content="Shodhan Kumar Shetty — AI & Machine Learning Engineer specializing in LLMs, deep learning, and cloud automation. Building intelligent systems that solve real-world problems." />
+  <meta name="keywords" content="Shodhan Kumar Shetty, AI Engineer, Machine Learning Engineer, LLM, Generative AI, RAG, Google Cloud, GCP, Deep Learning, Python Developer" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://shodhanshetty06.github.io/Portfolio/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://shodhanshetty06.github.io/Portfolio/" />
+  <meta property="og:site_name" content="Shodhan Kumar Shetty" />
   <meta property="og:title" content="Shodhan Kumar Shetty — AI/ML Engineer" />
-  <meta property="og:description" content="Building intelligent systems that think, learn, and scale." />
+  <meta property="og:description" content="Building intelligent systems that think, learn, and scale. AI/ML Engineer specializing in LLMs, RAG, and cloud automation." />
+  <meta property="og:image" content="https://shodhanshetty06.github.io/Portfolio/assets/Profile_pic.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shodhan Kumar Shetty — AI/ML Engineer" />
+  <meta name="twitter:description" content="Building intelligent systems that think, learn, and scale. AI/ML Engineer specializing in LLMs, RAG, and cloud automation." />
+  <meta name="twitter:image" content="https://shodhanshetty06.github.io/Portfolio/assets/Profile_pic.jpg" />
+
   <meta name="theme-color" content="#060608" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shodhan Kumar Shetty",
+    "jobTitle": "Associate Cloud Engineer",
+    "description": "AI/ML Engineer specializing in LLMs, Generative AI, and RAG, with a background in Google Cloud production operations.",
+    "url": "https://shodhanshetty06.github.io/Portfolio/",
+    "image": "https://shodhanshetty06.github.io/Portfolio/assets/Profile_pic.jpg",
+    "sameAs": [
+      "https://github.com/shodhanshetty06",
+      "https://www.linkedin.com/in/shodhan-shetty06/"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Niveus Solutions"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Mangalore Institute of Technology & Engineering"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kundapura",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- EmailJS SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script>
-    emailjs.init("I88A6eyYK4uy7lLda"); // Public Key
-  </script>
 
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
   <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            display: ['Syne', 'sans-serif'],
-            body: ['Outfit', 'sans-serif'],
-          }
-        }
-      }
-    }
+    window.addEventListener('DOMContentLoaded', () => emailjs.init("I88A6eyYK4uy7lLda"));
   </script>
 
   <style>
@@ -44,7 +78,7 @@
       --surface2: #13131E;
       --border: #1E1E30;
       --text: #EAEAf5;
-      --muted: #6B7080;
+      --muted: #7B8299;
       --card: #0B0B14;
     }
     .light-mode {
@@ -53,13 +87,40 @@
       --surface2: #EEEEF5;
       --border: #DDDDE8;
       --text: #0E0E1A;
-      --muted: #6B7080;
+      --muted: #5C6175;
       --card: #FFFFFF;
+      --accent: #007A91;
+      --accent2: #C41E42;
+      --accent3: #3D7A00;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html { scroll-behavior: smooth; }
+    /* ── UTILITY CLASSES (static replacement for the Tailwind CDN runtime —
+       only the classes actually used in this page) ── */
+    .flex{display:flex} .flex-1{flex:1 1 0%} .flex-col{flex-direction:column} .flex-wrap{flex-wrap:wrap}
+    .grid{display:grid} .grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))} .grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .hidden{display:none}
+    .items-center{align-items:center} .items-start{align-items:flex-start}
+    .justify-between{justify-content:space-between}
+    .max-w-2xl{max-width:42rem} .max-w-6xl{max-width:72rem}
+    .mx-auto{margin-left:auto;margin-right:auto} .w-full{width:100%}
+    .px-6{padding-left:1.5rem;padding-right:1.5rem} .py-4{padding-top:1rem;padding-bottom:1rem} .py-20{padding-top:5rem;padding-bottom:5rem}
+    .p-6{padding:1.5rem} .p-7{padding:1.75rem}
+    .mb-5{margin-bottom:1.25rem} .mb-7{margin-bottom:1.75rem} .mb-12{margin-bottom:3rem} .mb-14{margin-bottom:3.5rem}
+    .mt-14{margin-top:3.5rem}
+    .gap-3{gap:0.75rem} .gap-4{gap:1rem} .gap-5{gap:1.25rem} .gap-6{gap:1.5rem} .gap-7{gap:1.75rem} .gap-8{gap:2rem} .gap-10{gap:2.5rem} .gap-14{gap:3.5rem} .gap-16{gap:4rem}
+    @media (min-width:640px){ .sm\:flex-row{flex-direction:row} }
+    @media (min-width:768px){
+      .md\:flex-row{flex-direction:row} .md\:items-end{align-items:flex-end}
+      .md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))} .md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    }
+    @media (min-width:1024px){
+      .lg\:flex{display:flex} .lg\:hidden{display:none} .lg\:inline-flex{display:inline-flex}
+      .lg\:flex-row{flex-direction:row} .lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    }
+
+    html { scroll-behavior: smooth; overflow-x: hidden; }
 
     body {
       font-family: 'Outfit', sans-serif;
@@ -130,17 +191,6 @@
     #hero-canvas {
       position: absolute; inset: 0; width: 100%; height: 100%;
       pointer-events: none; opacity: 0.5;
-    }
-
-    /* ── GLOW TEXT ── */
-    .glow {
-      background: linear-gradient(135deg, #fff 30%, var(--accent) 70%, var(--accent2) 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .light-mode .glow {
-      background: linear-gradient(135deg, #0E0E1A 30%, #0099BB 70%, #CC2244 100%);
-      -webkit-background-clip: text; background-clip: text;
     }
 
     .accent-text { color: var(--accent); }
@@ -242,17 +292,6 @@
     }
     .timeline-item:last-child::after { display: none; }
 
-    /* ── TESTIMONIAL CARDS ── */
-    .testimonial-card {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 14px; padding: 28px;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .testimonial-card:hover {
-      border-color: rgba(0,229,255,0.3);
-      transform: translateY(-3px);
-    }
-
     /* ── SECTION LABELS ── */
     .section-label {
       font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em;
@@ -282,7 +321,8 @@
       transition: opacity 0.3s, transform 0.3s, border-color 0.2s, box-shadow 0.2s;
       color: var(--muted);
     }
-    #back-to-top.visible { opacity: 1; transform: translateY(0); }
+    #back-to-top.visible { opacity: 1; transform: translateY(0); visibility: visible; pointer-events: auto; }
+    #back-to-top { visibility: hidden; pointer-events: none; }
     #back-to-top:hover { border-color: var(--accent); color: var(--accent); box-shadow: 0 4px 20px rgba(0,229,255,0.2); }
 
     /* ── CONTACT INPUT ── */
@@ -301,15 +341,6 @@
     /* ── DIVIDER ── */
     .divider { border: none; border-top: 1px solid var(--border); }
 
-    /* ── AVATAR RING ── */
-    .avatar-ring {
-      position: relative; display: inline-block;
-    }
-    .avatar-ring::after {
-      content: ''; position: absolute; inset: -4px; border-radius: 50%;
-      background: conic-gradient(var(--accent), var(--accent2), var(--accent));
-      z-index: -1; animation: spin 6s linear infinite;
-    }
     @keyframes spin { to { transform: rotate(360deg); } }
 
     /* ── STATUS BADGE ── */
@@ -332,7 +363,6 @@
     .light-mode { background: var(--bg); color: var(--text); }
     .light-mode nav .nav-inner { background: rgba(245,245,250,0.8); }
     .light-mode .project-card { background: var(--surface); }
-    .light-mode .testimonial-card { background: var(--surface2); }
     .light-mode .skill-pill { background: var(--surface); }
     .light-mode body::before { opacity: 0.01; }
 
@@ -357,32 +387,11 @@
       background-size: 72px 72px;
     }
 
-    /* ── GLOW ORBS ── */
-    .orb1 {
-      position: absolute; width: 600px; height: 600px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(0,229,255,0.06) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .orb2 {
-      position: absolute; width: 400px; height: 400px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,77,109,0.05) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
     /* Mobile */
     @media (max-width: 768px) {
       body { cursor: auto; }
       #cursor, #cursor-ring { display: none; }
     }
-
-    /* TYPE ANIMATION */
-    .typewriter span { display: inline; }
-    .caret {
-      display: inline-block; width: 3px; height: 1em;
-      background: var(--accent); vertical-align: text-bottom;
-      margin-left: 2px; animation: blink 1s step-end infinite;
-    }
-    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
     /* ── THEME TOGGLE ── */
     .theme-toggle {
@@ -403,9 +412,10 @@
       backdrop-filter: blur(20px); z-index: 490;
       display: flex; flex-direction: column;
       align-items: center; justify-content: center; gap: 36px;
-      transform: translateY(-100%); transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+      transform: translateY(-100%); transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), visibility 0.4s;
+      visibility: hidden; pointer-events: none;
     }
-    .mobile-menu.open { transform: translateY(0); }
+    .mobile-menu.open { transform: translateY(0); visibility: visible; pointer-events: auto; }
     .mobile-menu a {
       font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 700;
       color: var(--text); text-decoration: none; letter-spacing: -0.02em;
@@ -435,7 +445,13 @@
     <a href="#skills" onclick="closeMobileMenu()">Skills</a>
     <a href="#projects" onclick="closeMobileMenu()">Projects</a>
     <a href="#experience" onclick="closeMobileMenu()">Experience</a>
+    <a href="#certifications" onclick="closeMobileMenu()">Certifications</a>
+    <a href="#education" onclick="closeMobileMenu()">Education</a>
     <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+    <a href="assets/resume_shodhan.pdf" download="Shodhan_Kumar_Shetty_Resume.pdf" onclick="closeMobileMenu()" style="display:inline-flex;align-items:center;gap:8px;font-size:1.05rem;padding:10px 24px;border-radius:8px;border:1px solid var(--border);margin-top:4px;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Resume
+    </a>
   </div>
 
   <!-- NAV -->
@@ -443,22 +459,28 @@
     <div class="nav-inner">
       <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#" style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.05rem;color:var(--text);text-decoration:none;letter-spacing:-0.02em;">
-          SKS<span style="color:var(--accent)"></span>
+          SKS
         </a>
-        <div class="hidden md:flex items-center gap-8">
+        <div class="hidden lg:flex items-center gap-8">
           <a class="nav-link" href="#about">About</a>
           <a class="nav-link" href="#skills">Skills</a>
           <a class="nav-link" href="#projects">Projects</a>
           <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link" href="#certifications">Certifications</a>
+          <a class="nav-link" href="#education">Education</a>
           <a class="nav-link" href="#contact">Contact</a>
         </div>
         <div class="flex items-center gap-4">
+          <a href="assets/resume_shodhan.pdf" download="Shodhan_Kumar_Shetty_Resume.pdf" class="hidden lg:inline-flex" style="align-items:center;gap:7px;padding:8px 16px;border-radius:7px;border:1px solid var(--border);color:var(--text);font-size:0.8rem;font-weight:600;text-decoration:none;white-space:nowrap;transition:border-color 0.2s,color 0.2s;cursor:none;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text)'">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Resume
+          </a>
           <!-- Theme toggle -->
           <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
             <div class="theme-toggle-thumb"></div>
           </button>
           <!-- Mobile hamburger -->
-          <button class="md:hidden" id="menu-btn" onclick="toggleMobileMenu()" style="background:none;border:none;cursor:none;color:var(--text);" aria-label="Menu">
+          <button class="lg:hidden" id="menu-btn" onclick="toggleMobileMenu()" style="background:none;border:none;cursor:none;color:var(--text);" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
             <svg id="menu-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
           </button>
         </div>
@@ -469,8 +491,6 @@
   <!-- ══════════════════════════════════════════════ HERO ══════════════════════════════════════════════ -->
   <section id="home" style="min-height:100vh;position:relative;display:flex;align-items:center;padding-top:80px;overflow:hidden;" class="grid-lines">
     <canvas id="hero-canvas"></canvas>
-    <div class="orb1" style="top:-150px;left:-200px;"></div>
-    <div class="orb2" style="bottom:50px;right:-100px;"></div>
 
     <div class="max-w-6xl mx-auto px-6 py-20 w-full" style="position:relative;z-index:2;">
       <div class="flex flex-col lg:flex-row items-center justify-between gap-14">
@@ -478,35 +498,42 @@
         <div class="flex-1 max-w-2xl">
           <div class="status-badge mb-7 reveal" style="transition-delay:0.1s">
             <span class="status-dot"></span>
-            Available for exciting AI/ML projects
+            Open to AI/ML &amp; Cloud opportunities
           </div>
-          <h1 class="hero-headline reveal" style="transition-delay:0.2s;">
-            <span class="glow">Shodhan Kumar</span><br/>
-            <span class="glow">Shetty</span>
+          <h1 class="hero-headline reveal" style="transition-delay:0.2s;color:var(--text);">
+            Shodhan Kumar<br/>Shetty
           </h1>
           <div style="margin-top:14px;margin-bottom:8px;" class="reveal" style="transition-delay:0.25s">
             <span style="font-family:'Syne',sans-serif;font-size:clamp(1rem,2.5vw,1.4rem);font-weight:600;color:var(--muted);">
-              AI / ML Engineer &nbsp;·&nbsp; LLM Architect &nbsp;·&nbsp; Cloud Automator
+              AI/ML Engineer &nbsp;·&nbsp; Generative AI, LLMs &amp; RAG
             </span>
           </div>
-          <p class="reveal" style="font-size:1.08rem;color:var(--muted);line-height:1.7;margin-top:18px;margin-bottom:36px;max-width:500px;transition-delay:0.3s;">
-            Building intelligent systems that <span class="accent-text" style="font-weight:600;">think, learn, and scale</span> — from LLM-powered automation pipelines to deep learning solutions deployed on cloud infrastructure.
+          <p class="reveal" style="font-size:1.08rem;color:var(--muted);line-height:1.7;margin-top:18px;margin-bottom:12px;max-width:500px;transition-delay:0.3s;">
+            <span class="accent-text" style="font-weight:600;">Associate Cloud Engineer at Niveus Solutions</span>, with 1.5+ years running production workloads on Google Cloud. I build ML and LLM-based systems — RAG pipelines on vector databases, FastAPI backends — and ship them as automated, cloud-deployed services.
           </p>
+          <div class="flex items-center gap-3 reveal" style="margin-bottom:36px;transition-delay:0.32s;">
+            <a href="https://github.com/shodhanshetty06" target="_blank" rel="noopener" aria-label="GitHub profile" style="width:38px;height:38px;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--muted);transition:border-color 0.2s,color 0.2s;cursor:none;" onmouseover="this.style.color='var(--accent)';this.style.borderColor='var(--accent)'" onmouseout="this.style.color='var(--muted)';this.style.borderColor='var(--border)'">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/shodhan-shetty06/" target="_blank" rel="noopener" aria-label="LinkedIn profile" style="width:38px;height:38px;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--muted);transition:border-color 0.2s,color 0.2s;cursor:none;" onmouseover="this.style.color='var(--accent)';this.style.borderColor='var(--accent)'" onmouseout="this.style.color='var(--muted)';this.style.borderColor='var(--border)'">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
           <div class="flex flex-wrap gap-4 reveal" style="transition-delay:0.35s;">
             <a href="#projects" class="btn-primary">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
               View Projects
             </a>
-            <a href="assets/resume_shodhan.pdf" target="_blank" class="btn-secondary">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              View CV
+            <a href="assets/resume_shodhan.pdf" download="Shodhan_Kumar_Shetty_Resume.pdf" class="btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Resume
             </a>
           </div>
           <!-- Stats row -->
           <div class="flex gap-10 mt-14 reveal" style="transition-delay:0.4s;">
             <div>
-              <div style="font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--accent);">6+</div>
-              <div style="font-size:0.8rem;color:var(--muted);margin-top:2px;">Live Projects</div>
+              <div style="font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--accent);">5+</div>
+              <div style="font-size:0.8rem;color:var(--muted);margin-top:2px;">Projects Shipped</div>
             </div>
             <div style="width:1px;background:var(--border);"></div>
             <div>
@@ -515,26 +542,22 @@
             </div>
             <div style="width:1px;background:var(--border);"></div>
             <div>
-              <div style="font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--accent);">2+</div>
-              <div style="font-size:0.8rem;color:var(--muted);margin-top:2px;">Years Building</div>
+              <div style="font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--accent);">1.5+</div>
+              <div style="font-size:0.8rem;color:var(--muted);margin-top:2px;">Yrs on GCP</div>
             </div>
           </div>
         </div>
         <!-- Right — Photo -->
         <div class="reveal-right" style="flex-shrink:0;transition-delay:0.3s">
           <div style="position:relative;">
-              <!-- Decorative rings -->
-            <div style="position:absolute;inset:-24px;border-radius:50%;border:1px dashed rgba(0,229,255,0.2);animation:spin 20s linear infinite;pointer-events:none;"></div>
-            <div style="position:absolute;inset:-48px;border-radius:50%;border:1px dashed rgba(255,77,109,0.1);animation:spin 35s linear infinite reverse;pointer-events:none;"></div>
             <!-- Avatar -->
             <div style="width:260px;height:260px;border-radius:50%;overflow:hidden;border:2px solid var(--border);position:relative;background:var(--surface2);" id="avatar-container">
               <!-- Your profile picture -->
-              <img id="avatar-img" src="assets/Profile_pic.jpg" alt="Shodhan Kumar Shetty" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none';document.getElementById('avatar-fallback').style.display='flex'" />
+              <img id="avatar-img" src="assets/Profile_pic.jpg" alt="Shodhan Kumar Shetty" width="520" height="520" fetchpriority="high" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none';document.getElementById('avatar-fallback').style.display='flex'" />
               <div id="avatar-fallback" style="display:none;width:100%;height:100%;align-items:center;justify-content:center;background:var(--surface2);font-family:'Syne',sans-serif;font-size:4rem;font-weight:800;color:var(--accent);">SK</div>
             </div>
-            <!-- Accent dots -->
-            <div style="position:absolute;bottom:-14px;right:-10px;width:22px;height:22px;border-radius:50%;background:var(--accent);box-shadow:0 0 20px var(--accent);"></div>
-            <div style="position:absolute;top:-8px;right:20px;width:12px;height:12px;border-radius:50%;background:var(--accent2);box-shadow:0 0 14px var(--accent2);"></div>
+            <!-- Status accent dot -->
+            <div style="position:absolute;bottom:10px;right:10px;width:16px;height:16px;border-radius:50%;background:var(--accent);border:3px solid var(--bg);"></div>
           </div>
         </div>
       </div>
@@ -548,12 +571,12 @@
       <div class="flex flex-col lg:flex-row gap-16 items-start">
         <div class="flex-1">
           <h2 class="reveal" style="font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.15;letter-spacing:-0.02em;margin-bottom:28px;">
-            Turning complex AI challenges<br/><span class="accent-text">into elegant solutions</span>
+            Grounded in cloud infrastructure,<br/><span class="accent-text">building toward AI/ML</span>
           </h2>
           <div class="reveal" style="display:flex;flex-direction:column;gap:18px;color:var(--muted);font-size:1.0rem;line-height:1.8;transition-delay:0.1s;">
-            <p>I'm an <strong style="color:var(--text)">AI & Machine Learning graduate</strong> with hands-on experience building real-world AI systems — from OCR pipelines and object detection models to LLM-powered automation tools and cloud-deployed solutions. I bridge the gap between research and production.</p>
-            <p>Currently, I'm working in <strong style="color:var(--text)">cloud operations</strong>, where I'm engineering an intelligent alert-analysis system that uses ML to prioritize incidents, extract insights from logs, and trigger automated workflows — deployed on <span class="accent-text">Google Cloud Run</span>.</p>
-            <p>I believe the best AI solutions are ones that <strong style="color:var(--text)">solve real problems</strong> — not just academic benchmarks. My focus is always on production-ready, scalable systems that create measurable impact.</p>
+            <p>I hold a <strong style="color:var(--text)">B.E. in Artificial Intelligence & Machine Learning</strong> from Mangalore Institute of Technology & Engineering (2020–2024, CGPA 7.16), where I built my first real AI systems — OCR and NER pipelines, object detection models, and NLP tools — alongside the core fundamentals of ML and deep learning.</p>
+            <p>Professionally, I work as an <strong style="color:var(--text)">Associate Cloud Engineer at Niveus Solutions</strong>, supporting production workloads on <span class="accent-text">Google Cloud</span> — deployments, IAM and access management, monitoring and logging, incident response, infrastructure automation, and cloud security. It's where I learned to operate systems reliably at scale, not just build them.</p>
+            <p>Outside of work, I build AI/ML and LLM-based projects on my own time — RAG pipelines, vector search, FastAPI-backed applications — and I'm combining that with my cloud background to move into <strong style="color:var(--text)">AI/ML engineering</strong>. I'm drawn to problems where machine learning meets production systems: making models reliable, observable, and actually deployable — not just accurate in a notebook.</p>
           </div>
         </div>
         <!-- Highlights -->
@@ -561,8 +584,8 @@
           <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:20px;">
             <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.05em;color:var(--muted);text-transform:uppercase;">Key Highlights</div>
             <hr class="divider"/>
-            <div class="flex flex-col gap-14px">
-              <div class="flex items-start gap-12px" style="gap:12px;margin-bottom:14px;">
+            <div class="flex flex-col" style="gap:14px;">
+              <div class="flex items-start" style="gap:12px;margin-bottom:14px;">
                 <div style="width:32px;height:32px;border-radius:8px;background:rgba(0,229,255,0.08);border:1px solid rgba(0,229,255,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent);margin-top:2px;">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
                 </div>
@@ -581,7 +604,7 @@
                 </div>
               </div>
               <div class="flex items-start" style="gap:12px;margin-bottom:14px;">
-                <div style="width:32px;height:32px;border-radius:8px;background:rgba(127,255,0,0.06);border:1px solid rgba(127,255,0,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#7FFF00;margin-top:2px;">
+                <div style="width:32px;height:32px;border-radius:8px;background:rgba(127,255,0,0.06);border:1px solid rgba(127,255,0,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent3);margin-top:2px;">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
                 </div>
                 <div>
@@ -614,109 +637,172 @@
   <section id="skills" style="padding:120px 0;background:var(--surface);">
     <div class="max-w-6xl mx-auto px-6">
       <div class="reveal"><div class="section-label mb-5">Expertise</div></div>
-      <h2 class="reveal" style="font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:14px;line-height:1.15;transition-delay:0.1s;">The stack behind<br/><span class="accent-text">every solution</span></h2>
-      <p class="reveal" style="color:var(--muted);font-size:1rem;margin-bottom:64px;max-width:500px;transition-delay:0.15s;">From neural networks to cloud deployments — tools I use to build intelligent, production-ready systems.</p>
+      <h2 class="reveal" style="font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:14px;line-height:1.15;transition-delay:0.1s;">Technical skills<br/><span class="accent-text">&amp; expertise</span></h2>
+      <p class="reveal" style="color:var(--muted);font-size:1rem;margin-bottom:18px;max-width:560px;transition-delay:0.15s;">Core focus is AI/ML, deep learning, and generative AI — backed by the backend, database, and cloud infrastructure needed to ship it.</p>
+      <div class="reveal" style="display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-bottom:56px;font-size:0.78rem;color:var(--muted);transition-delay:0.18s;">
+        <span style="display:flex;align-items:center;gap:7px;"><span style="width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;"></span>Core AI/ML &amp; GenAI stack</span>
+        <span style="display:flex;align-items:center;gap:7px;"><span style="width:7px;height:7px;border-radius:50%;background:var(--muted);display:inline-block;"></span>Supporting skills</span>
+      </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-        <!-- Card: AI/ML -->
+
+        <!-- 1. Programming -->
         <div class="reveal project-card p-6" style="transition-delay:0.1s;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+            <div style="width:36px;height:36px;border-radius:9px;background:rgba(107,112,128,0.12);display:flex;align-items:center;justify-content:center;color:var(--muted);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">Programming</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/python/6B7080" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">Python</span>
+            <span class="skill-pill"><span class="skill-dot"></span>SQL</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/cplusplus/6B7080" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">C++</span>
+          </div>
+        </div>
+
+        <!-- 2. Machine Learning (core) -->
+        <div class="reveal project-card p-6" style="transition-delay:0.12s;border-color:rgba(0,229,255,0.18);">
           <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
             <div style="width:36px;height:36px;border-radius:9px;background:rgba(0,229,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--accent);">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
             </div>
-            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">AI & Machine Learning</div>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">Machine Learning</div>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:8px;">
-            <span class="skill-pill"><span class="skill-dot"></span>TensorFlow</span>
-            <span class="skill-pill"><span class="skill-dot"></span>PyTorch</span>
-            <span class="skill-pill"><span class="skill-dot"></span>Scikit-learn</span>
-            <span class="skill-pill"><span class="skill-dot"></span>OpenCV</span>
-            <span class="skill-pill"><span class="skill-dot"></span>CUDA</span>
-            <span class="skill-pill"><span class="skill-dot"></span>NER / NLP</span>
-            <span class="skill-pill"><span class="skill-dot"></span>OCR</span>
+            <span class="skill-pill" style="border-color:rgba(0,229,255,0.2);"><img src="https://cdn.simpleicons.org/scikitlearn/00E5FF" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">Scikit-learn</span>
+            <span class="skill-pill" style="border-color:rgba(0,229,255,0.2);"><img src="https://cdn.simpleicons.org/pandas/00E5FF" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">Pandas</span>
+            <span class="skill-pill" style="border-color:rgba(0,229,255,0.2);"><img src="https://cdn.simpleicons.org/numpy/00E5FF" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">NumPy</span>
+            <span class="skill-pill" style="border-color:rgba(0,229,255,0.2);"><span class="skill-dot"></span>Model Evaluation</span>
+            <span class="skill-pill" style="border-color:rgba(0,229,255,0.2);"><span class="skill-dot"></span>Feature Engineering</span>
           </div>
         </div>
-        <!-- Card: LLMs -->
-        <div class="reveal project-card p-6" style="transition-delay:0.15s;">
+
+        <!-- 3. Deep Learning (core) -->
+        <div class="reveal project-card p-6" style="transition-delay:0.14s;border-color:rgba(0,229,255,0.18);">
           <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
-            <div style="width:36px;height:36px;border-radius:9px;background:rgba(255,77,109,0.1);display:flex;align-items:center;justify-content:center;color:var(--accent2);">
+            <div style="width:36px;height:36px;border-radius:9px;background:rgba(0,229,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--accent);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>
+            </div>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">Deep Learning</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span class="skill-pill" style="border-color:rgba(0,229,255,0.2);"><img src="https://cdn.simpleicons.org/pytorch/00E5FF" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">PyTorch</span>
+            <span class="skill-pill" style="border-color:rgba(0,229,255,0.2);"><img src="https://cdn.simpleicons.org/tensorflow/00E5FF" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">TensorFlow</span>
+            <span class="skill-pill" style="border-color:rgba(0,229,255,0.2);"><img src="https://cdn.simpleicons.org/keras/00E5FF" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">Keras</span>
+            <span class="skill-pill" style="border-color:rgba(0,229,255,0.2);"><span class="skill-dot"></span>CNN</span>
+            <span class="skill-pill" style="border-color:rgba(0,229,255,0.2);"><span class="skill-dot"></span>Computer Vision</span>
+          </div>
+        </div>
+
+        <!-- 4. Generative AI & LLM (core) -->
+        <div class="reveal project-card p-6" style="transition-delay:0.16s;border-color:rgba(0,229,255,0.18);">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+            <div style="width:36px;height:36px;border-radius:9px;background:rgba(0,229,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--accent);">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
             </div>
-            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">LLMs & Generative AI</div>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">Generative AI &amp; LLM</div>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:8px;">
-            <span class="skill-pill" style="border-color:rgba(255,77,109,0.2);"><span style="background:var(--accent2);" class="skill-dot"></span>Llama 3.1</span>
-            <span class="skill-pill" style="border-color:rgba(255,77,109,0.2);"><span style="background:var(--accent2);" class="skill-dot"></span>LangChain</span>
-            <span class="skill-pill" style="border-color:rgba(255,77,109,0.2);"><span style="background:var(--accent2);" class="skill-dot"></span>ChromaDB</span>
-            <span class="skill-pill" style="border-color:rgba(255,77,109,0.2);"><span style="background:var(--accent2);" class="skill-dot"></span>Transformers</span>
-            <span class="skill-pill" style="border-color:rgba(255,77,109,0.2);"><span style="background:var(--accent2);" class="skill-dot"></span>Prompt Eng.</span>
-            <span class="skill-pill" style="border-color:rgba(255,77,109,0.2);"><span style="background:var(--accent2);" class="skill-dot"></span>RAG Pipelines</span>
+            <span class="skill-pill" style="border-color:rgba(0,229,255,0.2);"><span class="skill-dot"></span>Llama 3.1</span>
+            <span class="skill-pill" style="border-color:rgba(0,229,255,0.2);"><span class="skill-dot"></span>Prompt Engineering</span>
+            <span class="skill-pill" style="border-color:rgba(0,229,255,0.2);"><span class="skill-dot"></span>LLM APIs</span>
+            <span class="skill-pill" style="border-color:rgba(0,229,255,0.2);"><span class="skill-dot"></span>Embeddings</span>
+            <span class="skill-pill" style="border-color:rgba(0,229,255,0.2);"><span class="skill-dot"></span>LoRA</span>
+            <span class="skill-pill" style="border-color:rgba(0,229,255,0.2);"><span class="skill-dot"></span>PEFT</span>
           </div>
         </div>
-        <!-- Card: Cloud -->
+
+        <!-- 5. RAG & Vector Search (core) -->
+        <div class="reveal project-card p-6" style="transition-delay:0.18s;border-color:rgba(0,229,255,0.18);">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+            <div style="width:36px;height:36px;border-radius:9px;background:rgba(0,229,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--accent);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            </div>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">RAG &amp; Vector Search</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span class="skill-pill" style="border-color:rgba(0,229,255,0.2);"><img src="https://cdn.simpleicons.org/langchain/00E5FF" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">LangChain</span>
+            <span class="skill-pill" style="border-color:rgba(0,229,255,0.2);"><span class="skill-dot"></span>ChromaDB</span>
+            <span class="skill-pill" style="border-color:rgba(0,229,255,0.2);"><span class="skill-dot"></span>pgvector</span>
+            <span class="skill-pill" style="border-color:rgba(0,229,255,0.2);"><span class="skill-dot"></span>Semantic Search</span>
+            <span class="skill-pill" style="border-color:rgba(0,229,255,0.2);"><span class="skill-dot"></span>Document Retrieval</span>
+            <span class="skill-pill" style="border-color:rgba(0,229,255,0.2);"><span class="skill-dot"></span>RAG Pipelines</span>
+          </div>
+        </div>
+
+        <!-- 6. Backend Development -->
         <div class="reveal project-card p-6" style="transition-delay:0.2s;">
           <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
-            <div style="width:36px;height:36px;border-radius:9px;background:rgba(127,255,0,0.08);display:flex;align-items:center;justify-content:center;color:#7FFF00;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            <div style="width:36px;height:36px;border-radius:9px;background:rgba(107,112,128,0.12);display:flex;align-items:center;justify-content:center;color:var(--muted);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
             </div>
-            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">Cloud & DevOps</div>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">Backend Development</div>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:8px;">
-            <span class="skill-pill" style="border-color:rgba(127,255,0,0.2);"><span style="background:#7FFF00;" class="skill-dot"></span>Google Cloud</span>
-            <span class="skill-pill" style="border-color:rgba(127,255,0,0.2);"><span style="background:#7FFF00;" class="skill-dot"></span>Cloud Run</span>
-            <span class="skill-pill" style="border-color:rgba(127,255,0,0.2);"><span style="background:#7FFF00;" class="skill-dot"></span>Docker</span>
-            <span class="skill-pill" style="border-color:rgba(127,255,0,0.2);"><span style="background:#7FFF00;" class="skill-dot"></span>CI/CD</span>
-            <span class="skill-pill" style="border-color:rgba(127,255,0,0.2);"><span style="background:#7FFF00;" class="skill-dot"></span>Automation</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/fastapi/6B7080" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">FastAPI</span>
+            <span class="skill-pill"><span class="skill-dot"></span>REST APIs</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/pydantic/6B7080" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">Pydantic</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/sqlalchemy/6B7080" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">SQLAlchemy</span>
           </div>
         </div>
-        <!-- Card: Languages -->
-        <div class="reveal project-card p-6" style="transition-delay:0.25s;">
+
+        <!-- 7. Databases -->
+        <div class="reveal project-card p-6" style="transition-delay:0.22s;">
           <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
-            <div style="width:36px;height:36px;border-radius:9px;background:rgba(0,229,255,0.08);display:flex;align-items:center;justify-content:center;color:var(--accent);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            </div>
-            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">Languages & Frameworks</div>
-          </div>
-          <div style="display:flex;flex-wrap:wrap;gap:8px;">
-            <span class="skill-pill"><span class="skill-dot"></span>Python</span>
-            <span class="skill-pill"><span class="skill-dot"></span>JavaScript</span>
-            <span class="skill-pill"><span class="skill-dot"></span>Node.js</span>
-            <span class="skill-pill"><span class="skill-dot"></span>FastAPI</span>
-            <span class="skill-pill"><span class="skill-dot"></span>Streamlit</span>
-            <span class="skill-pill"><span class="skill-dot"></span>React</span>
-          </div>
-        </div>
-        <!-- Card: Databases -->
-        <div class="reveal project-card p-6" style="transition-delay:0.3s;">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
-            <div style="width:36px;height:36px;border-radius:9px;background:rgba(255,77,109,0.08);display:flex;align-items:center;justify-content:center;color:var(--accent2);">
+            <div style="width:36px;height:36px;border-radius:9px;background:rgba(107,112,128,0.12);display:flex;align-items:center;justify-content:center;color:var(--muted);">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
             </div>
-            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">Databases & Storage</div>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">Databases</div>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:8px;">
-            <span class="skill-pill" style="border-color:rgba(255,77,109,0.2);"><span style="background:var(--accent2);" class="skill-dot"></span>MongoDB</span>
-            <span class="skill-pill" style="border-color:rgba(255,77,109,0.2);"><span style="background:var(--accent2);" class="skill-dot"></span>PostgreSQL</span>
-            <span class="skill-pill" style="border-color:rgba(255,77,109,0.2);"><span style="background:var(--accent2);" class="skill-dot"></span>ChromaDB</span>
-            <span class="skill-pill" style="border-color:rgba(255,77,109,0.2);"><span style="background:var(--accent2);" class="skill-dot"></span>Vector DBs</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/postgresql/6B7080" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">PostgreSQL</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/mysql/6B7080" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">MySQL</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/mongodb/6B7080" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">MongoDB</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/redis/6B7080" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">Redis</span>
+            <span class="skill-pill"><span class="skill-dot"></span>ChromaDB</span>
           </div>
         </div>
-        <!-- Card: Tools -->
-        <div class="reveal project-card p-6" style="transition-delay:0.35s;">
+
+        <!-- 8. Cloud & DevOps -->
+        <div class="reveal project-card p-6" style="transition-delay:0.24s;">
           <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
-            <div style="width:36px;height:36px;border-radius:9px;background:rgba(127,255,0,0.06);display:flex;align-items:center;justify-content:center;color:#7FFF00;">
+            <div style="width:36px;height:36px;border-radius:9px;background:rgba(107,112,128,0.12);display:flex;align-items:center;justify-content:center;color:var(--muted);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            </div>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">Cloud &amp; DevOps</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/googlecloud/6B7080" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">Google Cloud Platform</span>
+            <span class="skill-pill"><span class="skill-dot"></span>Compute Engine</span>
+            <span class="skill-pill"><span class="skill-dot"></span>Cloud Storage</span>
+            <span class="skill-pill"><span class="skill-dot"></span>IAM</span>
+            <span class="skill-pill"><span class="skill-dot"></span>Cloud Logging</span>
+            <span class="skill-pill"><span class="skill-dot"></span>Cloud Monitoring</span>
+            <span class="skill-pill"><span class="skill-dot"></span>Pub/Sub</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/docker/6B7080" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">Docker</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/kubernetes/6B7080" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">Kubernetes</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/githubactions/6B7080" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">GitHub Actions</span>
+          </div>
+        </div>
+
+        <!-- 9. Development Tools -->
+        <div class="reveal project-card p-6" style="transition-delay:0.26s;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+            <div style="width:36px;height:36px;border-radius:9px;background:rgba(107,112,128,0.12);display:flex;align-items:center;justify-content:center;color:var(--muted);">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
             </div>
-            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">Tools & Workflow</div>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">Development Tools</div>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:8px;">
-            <span class="skill-pill" style="border-color:rgba(127,255,0,0.2);"><span style="background:#7FFF00;" class="skill-dot"></span>Git / GitHub</span>
-            <span class="skill-pill" style="border-color:rgba(127,255,0,0.2);"><span style="background:#7FFF00;" class="skill-dot"></span>Jupyter</span>
-            <span class="skill-pill" style="border-color:rgba(127,255,0,0.2);"><span style="background:#7FFF00;" class="skill-dot"></span>VS Code</span>
-            <span class="skill-pill" style="border-color:rgba(127,255,0,0.2);"><span style="background:#7FFF00;" class="skill-dot"></span>Postman</span>
-            <span class="skill-pill" style="border-color:rgba(127,255,0,0.2);"><span style="background:#7FFF00;" class="skill-dot"></span>Linux</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/git/6B7080" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">Git</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/github/6B7080" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">GitHub</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/linux/6B7080" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">Linux</span>
+            <span class="skill-pill"><span class="skill-dot"></span>VS Code</span>
+            <span class="skill-pill"><img src="https://cdn.simpleicons.org/jupyter/6B7080" width="14" height="14" alt="" loading="lazy" onerror="this.outerHTML='<span class=skill-dot></span>'">Jupyter Notebook</span>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -735,138 +821,263 @@
         </a>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+      <!-- ═══ FEATURED: AI Job Seeker Platform ═══ -->
+      <div class="project-card reveal" style="padding:36px;margin-bottom:28px;">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:16px;">
+          <span style="font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);">Featured Project</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:100px;background:var(--surface2);border:1px solid var(--border);font-size:0.75rem;font-weight:600;color:var(--muted);">Not deployed — runs locally via Docker</span>
+        </div>
+        <h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.6rem;margin-bottom:14px;">AI Job Seeker Platform</h3>
 
-        <!-- Project 1: Gmail Automation -->
-        <div class="project-card reveal" style="transition-delay:0.1s;">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#0d1a2e 0%,#0a2540 60%,#0e3a5c 100%);">
-            <span style="font-size:3rem;">✉️</span>
-            <div style="position:absolute;bottom:14px;left:14px;display:flex;gap:6px;flex-wrap:wrap;">
-              <span class="tag">ML</span><span class="tag">Cloud</span><span class="tag">Automation</span>
-            </div>
-            <div style="position:absolute;top:14px;right:14px;padding:4px 9px;border-radius:6px;background:rgba(0,229,255,0.12);font-size:0.7rem;font-weight:600;color:var(--accent);border:1px solid rgba(0,229,255,0.2);">2026</div>
-          </div>
-          <div style="padding:22px;position:relative;z-index:1;">
-            <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.08rem;margin-bottom:8px;">Gmail Automation System</h3>
-            <p style="font-size:0.85rem;color:var(--muted);line-height:1.65;margin-bottom:18px;">Intelligent ML-powered automation system that analyzes cloud alerts, prioritizes incidents, extracts log insights, and triggers automated workflows integrated with Gmail and ticketing tools.</p>
-            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;">
-              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Python</span>
-              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">ML</span>
-              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">GCP</span>
-              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Cloud Run</span>
-            </div>
-            <div style="display:flex;gap:12px;">
-              <a href="https://github.com/shodhanshetty06/N8n-Automations/tree/master/Gmail%20Automation" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--accent);text-decoration:none;font-weight:600;">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                Code
-              </a>
-            </div>
+        <p style="font-size:0.9rem;color:var(--text);line-height:1.75;margin-bottom:14px;"><strong>Problem:</strong> <span style="color:var(--muted);">Job hunting means manually tailoring a resume per posting, judging fit yourself, and tracking every application's status by hand — a repetitive process that's a good fit for automation.</span></p>
+        <p style="font-size:0.9rem;color:var(--muted);line-height:1.75;margin-bottom:22px;"><strong style="color:var(--text);">Overview:</strong> A full-stack platform that automates the resume-to-application pipeline — parses an uploaded resume with an LLM into structured data, embeds it for semantic job matching, generates ATS-optimized resume rewrites, and can auto-apply through site-specific adapters — coordinated end-to-end by an event-driven Celery pipeline.</p>
+
+        <div style="margin-bottom:22px;">
+          <div style="font-weight:700;font-size:0.85rem;margin-bottom:10px;">Architecture &amp; workflow</div>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:0.78rem;color:var(--muted);">
+            <span style="padding:6px 11px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);">Resume upload</span><span style="color:var(--accent);">→</span>
+            <span style="padding:6px 11px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);">LLM parse</span><span style="color:var(--accent);">→</span>
+            <span style="padding:6px 11px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);">pgvector embed</span><span style="color:var(--accent);">→</span>
+            <span style="padding:6px 11px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);">ATS score</span><span style="color:var(--accent);">→</span>
+            <span style="padding:6px 11px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);">semantic match</span><span style="color:var(--accent);">→</span>
+            <span style="padding:6px 11px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);">dashboard (WebSocket)</span><span style="color:var(--accent);">→</span>
+            <span style="padding:6px 11px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);">notify</span>
           </div>
         </div>
 
-        <!-- Project 2: Cold Email Generator -->
-        <div class="project-card reveal" style="transition-delay:0.15s;">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#1a0d2e 0%,#280a40 60%,#3d0e5c 100%);">
-            <span style="font-size:3rem;">🤖</span>
-            <div style="position:absolute;bottom:14px;left:14px;display:flex;gap:6px;flex-wrap:wrap;">
-              <span class="tag tag-red">LLM</span><span class="tag tag-red">GenAI</span><span class="tag">RAG</span>
-            </div>
-            <div style="position:absolute;top:14px;right:14px;padding:4px 9px;border-radius:6px;background:rgba(255,77,109,0.12);font-size:0.7rem;font-weight:600;color:var(--accent2);border:1px solid rgba(255,77,109,0.2);">2024</div>
-          </div>
-          <div style="padding:22px;position:relative;z-index:1;">
-            <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.08rem;margin-bottom:8px;">Cold Email Generator</h3>
-            <p style="font-size:0.85rem;color:var(--muted);line-height:1.65;margin-bottom:18px;">GenAI-powered tool using Llama 3.1 + LangChain that scrapes job postings and auto-generates personalized cold emails with relevant portfolio links fetched from ChromaDB vector store.</p>
-            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;">
-              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Llama 3.1</span>
-              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">LangChain</span>
-              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">ChromaDB</span>
-              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Streamlit</span>
-            </div>
-            <div style="display:flex;gap:12px;">
-              <a href="https://github.com/shodhanshetty06/MyProjects/tree/main/Cold%20Email%20Generator" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--accent);text-decoration:none;font-weight:600;">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                Code
-              </a>
-            </div>
+        <div style="margin-bottom:22px;">
+          <div style="font-weight:700;font-size:0.85rem;margin-bottom:10px;">Main features</div>
+          <ul style="list-style:none;display:grid;grid-template-columns:1fr;gap:8px;padding:0;" class="md:grid-cols-2">
+            <li style="display:flex;gap:8px;font-size:0.85rem;color:var(--muted);line-height:1.5;"><span style="color:var(--accent);flex-shrink:0;">▸</span>LLM-based resume parsing into structured data</li>
+            <li style="display:flex;gap:8px;font-size:0.85rem;color:var(--muted);line-height:1.5;"><span style="color:var(--accent);flex-shrink:0;">▸</span>Semantic job matching via pgvector embeddings</li>
+            <li style="display:flex;gap:8px;font-size:0.85rem;color:var(--muted);line-height:1.5;"><span style="color:var(--accent);flex-shrink:0;">▸</span>ATS resume scoring + LLM-assisted rewrite (DOCX/PDF)</li>
+            <li style="display:flex;gap:8px;font-size:0.85rem;color:var(--muted);line-height:1.5;"><span style="color:var(--accent);flex-shrink:0;">▸</span>Auto-apply via Greenhouse/Lever APIs + Playwright</li>
+            <li style="display:flex;gap:8px;font-size:0.85rem;color:var(--muted);line-height:1.5;"><span style="color:var(--accent);flex-shrink:0;">▸</span>Real-time dashboard updates over WebSocket</li>
+            <li style="display:flex;gap:8px;font-size:0.85rem;color:var(--muted);line-height:1.5;"><span style="color:var(--accent);flex-shrink:0;">▸</span>Gmail-based application-status tracking (LLM classification)</li>
+          </ul>
+        </div>
+
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px;">
+          <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">FastAPI</span>
+          <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">SQLAlchemy (async)</span>
+          <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">PostgreSQL + pgvector</span>
+          <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Redis</span>
+          <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Celery</span>
+          <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">React 19 + TypeScript</span>
+          <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Vite</span>
+          <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Docker + nginx</span>
+          <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Ollama / Claude / OpenAI / Gemini / Groq</span>
+          <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Playwright</span>
+        </div>
+
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px;">
+          <a href="https://github.com/shodhanshetty06/MyProjects/tree/main/job-seaker" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-size:0.85rem;color:var(--accent);text-decoration:none;font-weight:600;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub Repository
+          </a>
+          <button id="jobseeker-details-btn" onclick="toggleDetails('jobseeker-details')" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:8px;background:transparent;border:1px solid var(--border);color:var(--text);font-size:0.82rem;font-weight:600;cursor:none;font-family:'Outfit',sans-serif;transition:border-color 0.2s;">
+            <span class="toggle-label">Technical deep dive</span>
+            <svg class="chevron" style="transition:transform 0.25s;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+        </div>
+
+        <div id="jobseeker-details" style="display:none;margin-top:24px;padding-top:24px;border-top:1px solid var(--border);flex-direction:column;gap:16px;">
+          <div><div style="font-weight:700;font-size:0.82rem;color:var(--accent);margin-bottom:4px;">Data processing</div><p style="font-size:0.85rem;color:var(--muted);line-height:1.65;">Resumes are uploaded as PDF/DOCX, text-extracted with pypdf/python-docx, then passed to an LLM for structured extraction into typed fields (skills, experience, education).</p></div>
+          <div><div style="font-weight:700;font-size:0.82rem;color:var(--accent);margin-bottom:4px;">Model / LLM selection</div><p style="font-size:0.85rem;color:var(--muted);line-height:1.65;">A pluggable AI-provider layer: Ollama (local) by default for dev, swappable to Claude, OpenAI, Gemini, or Groq via one environment variable — used for resume parsing, email classification, job-skill extraction, and ATS resume rewriting.</p></div>
+          <div><div style="font-weight:700;font-size:0.82rem;color:var(--accent);margin-bottom:4px;">Embeddings &amp; retrieval</div><p style="font-size:0.85rem;color:var(--muted);line-height:1.65;">Resumes and job postings are embedded (local sentence-transformers, 384-dim, by default — swappable to Voyage/OpenAI/Gemini) and stored in Postgres via pgvector. Matching combines cosine similarity with explicit skill-overlap scoring and rule-based boosts, not embeddings alone.</p></div>
+          <div><div style="font-weight:700;font-size:0.82rem;color:var(--accent);margin-bottom:4px;">Backend architecture</div><p style="font-size:0.85rem;color:var(--muted);line-height:1.65;">A modular monolith — 14 feature modules in one FastAPI process, each following router → service → repository → model layering. Cross-module coordination runs through direct Celery task chaining and Redis pub/sub, not the custom event bus I built (which, per my own architecture audit, ended up wired but unused — real coordination happens elsewhere).</p></div>
+          <div><div style="font-weight:700;font-size:0.82rem;color:var(--accent);margin-bottom:4px;">Database design</div><p style="font-size:0.85rem;color:var(--muted);line-height:1.65;">PostgreSQL with 40 tables across the 14 modules, SQLAlchemy ORM + Alembic migrations, and the pgvector extension for similarity search alongside the relational data.</p></div>
+          <div><div style="font-weight:700;font-size:0.82rem;color:var(--accent);margin-bottom:4px;">API integration</div><p style="font-size:0.85rem;color:var(--muted);line-height:1.65;">A versioned REST API (<code>/api/v1/*</code>) documented via Swagger/ReDoc; Gmail API (OAuth) for application-status email polling; Greenhouse/Lever HTTP APIs plus Playwright browser automation for the ATSs that don't expose one.</p></div>
+          <div><div style="font-weight:700;font-size:0.82rem;color:var(--accent);margin-bottom:4px;">Deployment architecture</div><p style="font-size:0.85rem;color:var(--muted);line-height:1.65;">Fully containerized with Docker Compose — nginx as the single public entry point, proxying to the API and the frontend. Built and verified locally; not deployed to a public environment yet.</p></div>
+          <div><div style="font-weight:700;font-size:0.82rem;color:var(--accent);margin-bottom:4px;">Challenges &amp; limitations</div><p style="font-size:0.85rem;color:var(--muted);line-height:1.65;">I ran a full self-audit of the codebase rather than assume it worked end-to-end, and documented the real gaps: the in-process event bus was built but never actually wired to anything; push notifications are a no-op placeholder; and the AI Career Coach tools don't auto-trigger after a resume finishes processing — they're manual, on-demand only.</p></div>
+        </div>
+      </div>
+
+      <!-- ═══ FEATURED: FinOps Devta ═══ -->
+      <div class="project-card reveal" style="padding:36px;margin-bottom:56px;transition-delay:0.05s;">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:16px;">
+          <span style="font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);">Featured Project</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:100px;background:rgba(127,255,0,0.08);border:1px solid rgba(127,255,0,0.25);font-size:0.75rem;font-weight:600;color:var(--accent3);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent3);"></span>Live</span>
+        </div>
+        <h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.6rem;margin-bottom:14px;">FinOps Devta — GCP Cost Estimation Platform</h3>
+
+        <p style="font-size:0.9rem;color:var(--text);line-height:1.75;margin-bottom:14px;"><strong>Problem:</strong> <span style="color:var(--muted);">Estimating and optimizing Google Cloud spend is usually manual and disconnected from real pricing data — teams need a fast way to turn business requirements into a validated, priced architecture with a clear audit trail.</span></p>
+        <p style="font-size:0.9rem;color:var(--muted);line-height:1.75;margin-bottom:22px;"><strong style="color:var(--text);">Overview:</strong> A full-stack FinOps platform that turns customer requirements — entered via a wizard, an uploaded Excel sheet, or free text — into a validated architecture recommendation, priced against the real Google Cloud Billing Catalog API, with exportable Excel/PDF proposals, rightsizing and committed-use-discount recommendations, and GCP/AWS/Azure cost comparison.</p>
+
+        <div style="margin-bottom:22px;">
+          <div style="font-weight:700;font-size:0.85rem;margin-bottom:10px;">Architecture &amp; workflow</div>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:0.78rem;color:var(--muted);">
+            <span style="padding:6px 11px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);">Requirement intake</span><span style="color:var(--accent);">→</span>
+            <span style="padding:6px 11px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);">13-rule validation</span><span style="color:var(--accent);">→</span>
+            <span style="padding:6px 11px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);">normalization</span><span style="color:var(--accent);">→</span>
+            <span style="padding:6px 11px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);">AI recommendation</span><span style="color:var(--accent);">→</span>
+            <span style="padding:6px 11px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);">live GCP pricing</span><span style="color:var(--accent);">→</span>
+            <span style="padding:6px 11px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);">Excel / PDF report</span><span style="color:var(--accent);">→</span>
+            <span style="padding:6px 11px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);">audit log</span>
           </div>
         </div>
 
-        <!-- Project 3: Finance Expense Tracker -->
-        <div class="project-card reveal" style="transition-delay:0.2s;">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#0a1f0d 0%,#0d3015 60%,#103d18 100%);">
-            <span style="font-size:3rem;">💰</span>
-            <div style="position:absolute;bottom:14px;left:14px;display:flex;gap:6px;flex-wrap:wrap;">
-              <span class="tag">MERN</span><span class="tag">Full-Stack</span>
-            </div>
-            <div style="position:absolute;top:14px;right:14px;padding:4px 9px;border-radius:6px;background:rgba(127,255,0,0.1);font-size:0.7rem;font-weight:600;color:#7FFF00;border:1px solid rgba(127,255,0,0.2);">2025</div>
+        <div style="margin-bottom:22px;">
+          <div style="font-weight:700;font-size:0.85rem;margin-bottom:10px;">Main features</div>
+          <ul style="list-style:none;display:grid;grid-template-columns:1fr;gap:8px;padding:0;" class="md:grid-cols-2">
+            <li style="display:flex;gap:8px;font-size:0.85rem;color:var(--muted);line-height:1.5;"><span style="color:var(--accent);flex-shrink:0;">▸</span>Live Google Cloud Billing Catalog API pricing, not hardcoded</li>
+            <li style="display:flex;gap:8px;font-size:0.85rem;color:var(--muted);line-height:1.5;"><span style="color:var(--accent);flex-shrink:0;">▸</span>Excel + free-text natural-language requirement intake</li>
+            <li style="display:flex;gap:8px;font-size:0.85rem;color:var(--muted);line-height:1.5;"><span style="color:var(--accent);flex-shrink:0;">▸</span>13-rule validation + strategy-based normalization, fully audited</li>
+            <li style="display:flex;gap:8px;font-size:0.85rem;color:var(--muted);line-height:1.5;"><span style="color:var(--accent);flex-shrink:0;">▸</span>Rightsizing, committed-use-discount, forecast &amp; carbon estimates</li>
+            <li style="display:flex;gap:8px;font-size:0.85rem;color:var(--muted);line-height:1.5;"><span style="color:var(--accent);flex-shrink:0;">▸</span>GCP / AWS / Azure cross-cloud cost comparison</li>
+            <li style="display:flex;gap:8px;font-size:0.85rem;color:var(--muted);line-height:1.5;"><span style="color:var(--accent);flex-shrink:0;">▸</span>Versioned project/estimate history, JWT auth + RBAC</li>
+          </ul>
+        </div>
+
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px;">
+          <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">FastAPI</span>
+          <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">SQLAlchemy + Alembic</span>
+          <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">PostgreSQL (Neon)</span>
+          <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Redis + Celery</span>
+          <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Next.js 16 + TypeScript</span>
+          <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Tailwind CSS</span>
+          <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Google Cloud Billing API</span>
+          <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Groq (LLM)</span>
+          <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Docker + Kubernetes</span>
+          <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">GitHub Actions CI/CD</span>
+        </div>
+
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px;">
+          <a href="https://github.com/shodhanshetty06/finops-devta" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-size:0.85rem;color:var(--accent);text-decoration:none;font-weight:600;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub Repository
+          </a>
+          <a href="https://finops-devta.vercel.app" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-size:0.85rem;color:var(--accent3);text-decoration:none;font-weight:600;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Live Demo
+          </a>
+          <button id="finops-details-btn" onclick="toggleDetails('finops-details')" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:8px;background:transparent;border:1px solid var(--border);color:var(--text);font-size:0.82rem;font-weight:600;cursor:none;font-family:'Outfit',sans-serif;transition:border-color 0.2s;">
+            <span class="toggle-label">Technical deep dive</span>
+            <svg class="chevron" style="transition:transform 0.25s;" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+        </div>
+
+        <div id="finops-details" style="display:none;margin-top:24px;padding-top:24px;border-top:1px solid var(--border);flex-direction:column;gap:16px;">
+          <div><div style="font-weight:700;font-size:0.82rem;color:var(--accent);margin-bottom:4px;">Data processing</div><p style="font-size:0.85rem;color:var(--muted);line-height:1.65;">Three intake paths into one shared schema: an interactive wizard, an Excel questionnaire (the blank template and the parser are generated from the same field schema, so they can't drift apart), and free-text natural-language extraction.</p></div>
+          <div><div style="font-weight:700;font-size:0.82rem;color:var(--accent);margin-bottom:4px;">Model / LLM selection</div><p style="font-size:0.85rem;color:var(--muted);line-height:1.65;">Groq powers optional plain-English explanations and an AI assistant chat; both degrade gracefully (deterministic template text, or a 503) when no Groq key is configured. The core estimation/pricing engine itself is fully deterministic and doesn't depend on an LLM — the free-text extractor is explicitly rule-based today, documented as a drop-in point for an LLM later.</p></div>
+          <div><div style="font-weight:700;font-size:0.82rem;color:var(--accent);margin-bottom:4px;">Embeddings &amp; retrieval</div><p style="font-size:0.85rem;color:var(--muted);line-height:1.65;">Not used here — GCP SKU matching is done via structured catalog lookups (machine family, disk type, GPU type, region) against the real Cloud Billing Catalog API, not vector search.</p></div>
+          <div><div style="font-weight:700;font-size:0.82rem;color:var(--accent);margin-bottom:4px;">Backend architecture</div><p style="font-size:0.85rem;color:var(--muted);line-height:1.65;">Layered engines — validation → normalization → recommendation → architecture → pricing — each sitting behind an interface (<code>CatalogProvider</code>, <code>PricingProvider</code>) so mock data, live GCP pricing, and mock AWS/Azure providers are interchangeable with zero business-logic changes.</p></div>
+          <div><div style="font-weight:700;font-size:0.82rem;color:var(--accent);margin-bottom:4px;">Database design</div><p style="font-size:0.85rem;color:var(--muted);line-height:1.65;">SQLAlchemy models for users, projects, estimate_versions, and audit_log_rows. Every save creates a new immutable, auto-incrementing estimate version instead of overwriting — full history stays reloadable and re-exportable.</p></div>
+          <div><div style="font-weight:700;font-size:0.82rem;color:var(--accent);margin-bottom:4px;">API integration</div><p style="font-size:0.85rem;color:var(--muted);line-height:1.65;">The real Google Cloud Billing Catalog API (<code>cloudbilling.googleapis.com</code>) with SKU matching, pagination, retry, and a Redis-backed cache (in-memory fallback); the Groq API for the optional LLM features.</p></div>
+          <div><div style="font-weight:700;font-size:0.82rem;color:var(--accent);margin-bottom:4px;">Deployment architecture</div><p style="font-size:0.85rem;color:var(--muted);line-height:1.65;">Vercel (Next.js frontend) + Render (FastAPI backend, Docker) + Neon (serverless Postgres) on the free tier — verified live. A separate Kubernetes manifest set exists for a real cluster but, per my own deployment docs, was validated structurally and never applied to a live cluster.</p></div>
+          <div><div style="font-weight:700;font-size:0.82rem;color:var(--accent);margin-bottom:4px;">Challenges &amp; limitations</div><p style="font-size:0.85rem;color:var(--muted);line-height:1.65;">Redis and the Celery worker are skipped on the free-tier deploy (Render's free plan has no background-worker service), so async report/batch jobs accept requests but stay queued rather than completing — a documented gap, not a hidden one. AWS/Azure pricing is mock-only so far (no live Pricing/Retail Prices API integration yet), and live GCP pricing was validated against realistic mocked API responses before a real end-to-end credential run.</p></div>
+        </div>
+      </div>
+
+      <!-- ═══ secondary: full detail, 2-column ═══ -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-7 mb-12">
+
+        <!-- Cold Email Generator -->
+        <div class="project-card reveal p-7" style="transition-delay:0.1s;">
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:12px;">
+            <span class="tag tag-red">LLM</span><span class="tag">RAG-lite</span>
+            <span style="padding:4px 11px;border-radius:100px;background:var(--surface2);border:1px solid var(--border);font-size:0.72rem;font-weight:600;color:var(--muted);">Local only</span>
           </div>
-          <div style="padding:22px;position:relative;z-index:1;">
-            <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.08rem;margin-bottom:8px;">Finance Expense Tracker</h3>
-            <p style="font-size:0.85rem;color:var(--muted);line-height:1.65;margin-bottom:18px;">Web-based finance tracker built during MERN stack internship. Features real-time expense categorization, data visualization dashboards, and robust data handling for personal finance management.</p>
-            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;">
-              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">MongoDB</span>
-              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Express</span>
-              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">React</span>
-              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Node.js</span>
-            </div>
-            <div style="display:flex;gap:12px;">
-              <a href="https://github.com/shodhanshetty06" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--accent);text-decoration:none;font-weight:600;">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                Code
-              </a>
-            </div>
+          <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.15rem;margin-bottom:10px;">Llama 3.1 Cold Email Generator</h3>
+          <p style="font-size:0.85rem;color:var(--muted);line-height:1.7;margin-bottom:14px;"><strong style="color:var(--text);">Problem:</strong> Writing a tailored cold email for every job posting is repetitive. <strong style="color:var(--text);">Overview:</strong> A Streamlit app that scrapes a job posting URL, extracts structured job data with an LLM, retrieves the most relevant portfolio projects via vector similarity, and generates a tailored email referencing them.</p>
+          <div style="font-size:0.78rem;color:var(--muted);margin-bottom:14px;line-height:1.6;">
+            <strong style="color:var(--text);">Flow:</strong> URL scraped (WebBaseLoader) → text cleaned (regex) → LLM extracts job JSON (role/skills/description) → skills query ChromaDB for top-2 matching portfolio links → LLM writes the email referencing them.
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;">
+            <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">LangChain</span>
+            <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Groq (Llama 3.1 70B)</span>
+            <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">ChromaDB</span>
+            <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Streamlit</span>
+            <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Pandas</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;">
+            <a href="https://github.com/shodhanshetty06/MyProjects/tree/main/Cold%20Email%20Generator" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--accent);text-decoration:none;font-weight:600;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              GitHub Repository
+            </a>
+            <button id="coldemail-details-btn" onclick="toggleDetails('coldemail-details')" style="display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--text);background:none;border:none;cursor:none;font-family:'Outfit',sans-serif;font-weight:600;">
+              <span class="toggle-label">Technical deep dive</span>
+              <svg class="chevron" style="transition:transform 0.25s;" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
+          <div id="coldemail-details" style="display:none;margin-top:16px;padding-top:16px;border-top:1px solid var(--border);flex-direction:column;gap:12px;">
+            <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;"><strong style="color:var(--text);">Model:</strong> Llama 3.1 70B (<code>llama-3.1-70b-versatile</code>) served via Groq's inference API, for both job-data extraction and email writing — chosen for inference speed over running the model locally.</p>
+            <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;"><strong style="color:var(--text);">Retrieval:</strong> ChromaDB's default embedding function indexes a small CSV of tech-stack → portfolio-link pairs; extracted job skills query it for the 2 most relevant links. This is lightweight retrieval, not a full RAG question-answering pipeline.</p>
+            <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;"><strong style="color:var(--text);">Limitations:</strong> depends on the target page being scrapeable (no JS-rendered career pages) and the LLM returning valid JSON — it fails with a clear error rather than silently breaking, but doesn't yet auto-retry a bad parse. Runs locally only; not deployed.</p>
           </div>
         </div>
 
-        <!-- Project 4: Object Detection -->
-        <div class="project-card reveal" style="transition-delay:0.25s;">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#1a0d0d 0%,#2e1010 60%,#3d1414 100%);">
-            <span style="font-size:3rem;">👁️</span>
-            <div style="position:absolute;bottom:14px;left:14px;display:flex;gap:6px;flex-wrap:wrap;">
-              <span class="tag tag-red">Deep Learning</span><span class="tag">CV</span>
-            </div>
-            <div style="position:absolute;top:14px;right:14px;padding:4px 9px;border-radius:6px;background:rgba(255,77,109,0.12);font-size:0.7rem;font-weight:600;color:var(--accent2);border:1px solid rgba(255,77,109,0.2);">2024</div>
+        <!-- Object Detection -->
+        <div class="project-card reveal p-7" style="transition-delay:0.15s;">
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:12px;">
+            <span class="tag">Computer Vision</span><span class="tag">Deep Learning</span>
+            <span style="padding:4px 11px;border-radius:100px;background:var(--surface2);border:1px solid var(--border);font-size:0.72rem;font-weight:600;color:var(--muted);">Local only</span>
           </div>
-          <div style="padding:22px;position:relative;z-index:1;">
-            <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.08rem;margin-bottom:8px;">Object Detection with TensorFlow</h3>
-            <p style="font-size:0.85rem;color:var(--muted);line-height:1.65;margin-bottom:18px;">Real-time object detection system built using TensorFlow and OpenCV. Implements custom-trained models for accurate multi-class detection with optimized inference pipeline for production use.</p>
-            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;">
-              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">TensorFlow</span>
-              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">OpenCV</span>
-              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Python</span>
-              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">CUDA</span>
-            </div>
+          <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.15rem;margin-bottom:10px;">Object Detection — SSD MobileNet</h3>
+          <p style="font-size:0.85rem;color:var(--muted);line-height:1.7;margin-bottom:14px;"><strong style="color:var(--text);">Problem:</strong> Real-time object/person detection needs a model accurate enough to be useful and fast enough to run without data-center GPUs. <strong style="color:var(--text);">Overview:</strong> A transfer-learning pipeline on the TensorFlow 2 Object Detection API, fine-tuning an SSD MobileNet backbone for real-time detection, trained on COCO-format annotations.</p>
+          <div style="font-size:0.78rem;color:var(--muted);margin-bottom:14px;line-height:1.6;">
+            <strong style="color:var(--text);">Flow:</strong> COCO-format dataset → TFRecord conversion (TF Object Detection API) → transfer learning on COCO-pretrained SSD MobileNet → TensorBoard-monitored training → exported inference graph.
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;">
+            <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">TensorFlow 2</span>
+            <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">SSD MobileNet</span>
+            <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">COCO API</span>
+            <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">CUDA / cuDNN</span>
+            <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Python</span>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;">
             <a href="https://github.com/shodhanshetty06/MyProjects/tree/main/Object%20Detection%20Using%20Tensorflow" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--accent);text-decoration:none;font-weight:600;">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              Code
+              GitHub Repository
             </a>
+            <button id="objdet-details-btn" onclick="toggleDetails('objdet-details')" style="display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--text);background:none;border:none;cursor:none;font-family:'Outfit',sans-serif;font-weight:600;">
+              <span class="toggle-label">Technical deep dive</span>
+              <svg class="chevron" style="transition:transform 0.25s;" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
+          <div id="objdet-details" style="display:none;margin-top:16px;padding-top:16px;border-top:1px solid var(--border);flex-direction:column;gap:12px;">
+            <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;"><strong style="color:var(--text);">Model selection:</strong> SSD MobileNet — a single-shot detector on a MobileNet backbone, chosen specifically for real-time inference speed over a heavier two-stage detector like Faster R-CNN.</p>
+            <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;"><strong style="color:var(--text);">Data processing:</strong> COCO-format annotations converted to TFRecords through the TF Object Detection API's standard input pipeline.</p>
+            <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;"><strong style="color:var(--text);">Limitations:</strong> environment setup for the TF2 Object Detection API (protobuf compilation, matched CUDA/cuDNN/TensorFlow versions) is notoriously fragile — the repo's README documents the exact pinned versions needed for a working install. Local training/inference only; no exported model served publicly.</p>
           </div>
         </div>
 
-        <!-- Project 5: News Summarization -->
-        <div class="project-card reveal" style="transition-delay:0.3s;">
-          <div class="project-thumb" style="background:linear-gradient(135deg,#0a0d1f 0%,#0d1540 60%,#101a5c 100%);">
-            <span style="font-size:3rem;">📰</span>
-            <div style="position:absolute;bottom:14px;left:14px;display:flex;gap:6px;flex-wrap:wrap;">
-              <span class="tag">NLP</span><span class="tag">Transformers</span>
+      </div>
+
+      <!-- ═══ brief: concept projects, code not published ═══ -->
+      <div style="margin-bottom:8px;">
+        <div class="reveal" style="font-size:0.78rem;color:var(--muted);margin-bottom:16px;">Also worked on — described below from project notes; code for these wasn't published to a public repo, so there's nothing to link to.</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
+
+          <div class="reveal" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:26px;">
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:12px;">
+              <span style="padding:4px 11px;border-radius:100px;background:var(--surface2);border:1px solid var(--border);font-size:0.72rem;font-weight:600;color:var(--muted);">Academic project · code not published</span>
             </div>
-            <div style="position:absolute;top:14px;right:14px;padding:4px 9px;border-radius:6px;background:rgba(0,229,255,0.12);font-size:0.7rem;font-weight:600;color:var(--accent);border:1px solid rgba(0,229,255,0.2);">2024</div>
-          </div>
-          <div style="padding:22px;position:relative;z-index:1;">
-            <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.08rem;margin-bottom:8px;">News Summarization Engine</h3>
-            <p style="font-size:0.85rem;color:var(--muted);line-height:1.65;margin-bottom:18px;">NLP-powered news summarization tool using transformer models to extract key insights and generate concise summaries from large volumes of news articles automatically.</p>
-            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;">
-              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Transformers</span>
+            <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:8px;">Legal Document OCR &amp; NER Extraction</h3>
+            <p style="font-size:0.84rem;color:var(--muted);line-height:1.7;margin-bottom:14px;">An academic project exploring automated data extraction from legal documents — OCR to digitize scanned pages, then a NER pipeline to identify key entities, with separate modules for data processing and storage.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">OCR</span>
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">NER</span>
               <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">NLP</span>
-              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Python</span>
-              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">BERT</span>
             </div>
-            <a href="https://github.com/shodhanshetty06/MyProjects/tree/main/News%20Summarization" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;color:var(--accent);text-decoration:none;font-weight:600;">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              Code
-            </a>
           </div>
+
+          <div class="reveal" style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:26px;">
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:12px;">
+              <span style="padding:4px 11px;border-radius:100px;background:var(--surface2);border:1px solid var(--border);font-size:0.72rem;font-weight:600;color:var(--muted);">Concept project · code not published</span>
+            </div>
+            <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:8px;">GCP Cloud Security Automation for DDoS Mitigation</h3>
+            <p style="font-size:0.84rem;color:var(--muted);line-height:1.7;margin-bottom:14px;">Applied Google Cloud security practices — IAM policies, Cloud Monitoring/Logging-based alerting, and automated response — to detect and respond to DDoS-style traffic patterns, drawing on the same GCP operations background I use day-to-day at Niveus.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">GCP</span>
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">IAM</span>
+              <span style="font-size:0.72rem;padding:3px 8px;border-radius:4px;background:var(--surface2);color:var(--muted);border:1px solid var(--border);">Cloud Monitoring</span>
+            </div>
+          </div>
+
         </div>
+      </div>
+    </div>
   </section>
 
   <!-- ══════════════════════════════════════════════ EXPERIENCE ══════════════════════════════════════════════ -->
@@ -884,14 +1095,22 @@
           <div style="background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:26px;transition:border-color 0.2s;" class="exp-card">
             <div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:12px;">
               <div>
-                <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;">Cloud Operations Engineer</div>
-                <div style="color:var(--accent);font-size:0.88rem;font-weight:600;margin-top:4px;">Current Employment &nbsp;·&nbsp; Bengaluru, India</div>
+                <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;">Associate Cloud Engineer</div>
+                <div style="color:var(--accent);font-size:0.88rem;font-weight:600;margin-top:4px;">Niveus Solutions &nbsp;·&nbsp; Udupi, India</div>
               </div>
-              <div style="padding:4px 12px;border-radius:100px;background:rgba(0,229,255,0.08);border:1px solid rgba(0,229,255,0.2);font-size:0.75rem;font-weight:600;color:var(--accent);white-space:nowrap;">Feb 2026 — Present</div>
+              <div style="padding:4px 12px;border-radius:100px;background:rgba(0,229,255,0.08);border:1px solid rgba(0,229,255,0.2);font-size:0.75rem;font-weight:600;color:var(--accent);white-space:nowrap;">Apr 2025 — Present</div>
             </div>
-            <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;margin-bottom:16px;">Engineering an ML-powered intelligent alert analysis system that prioritizes cloud incidents, extracts actionable insights from logs, and triggers automated remediation workflows. System designed for deployment on Google Cloud Run with integrations to ticketing tools.</p>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:7px;padding:0;margin-bottom:16px;">
+              <li style="display:flex;gap:8px;font-size:0.88rem;color:var(--muted);line-height:1.6;"><span style="color:var(--accent);flex-shrink:0;">▸</span>Google Cloud production workload support</li>
+              <li style="display:flex;gap:8px;font-size:0.88rem;color:var(--muted);line-height:1.6;"><span style="color:var(--accent);flex-shrink:0;">▸</span>Infrastructure deployment and management</li>
+              <li style="display:flex;gap:8px;font-size:0.88rem;color:var(--muted);line-height:1.6;"><span style="color:var(--accent);flex-shrink:0;">▸</span>IAM and security configuration</li>
+              <li style="display:flex;gap:8px;font-size:0.88rem;color:var(--muted);line-height:1.6;"><span style="color:var(--accent);flex-shrink:0;">▸</span>Cloud Logging and Monitoring</li>
+              <li style="display:flex;gap:8px;font-size:0.88rem;color:var(--muted);line-height:1.6;"><span style="color:var(--accent);flex-shrink:0;">▸</span>Incident investigation and troubleshooting</li>
+              <li style="display:flex;gap:8px;font-size:0.88rem;color:var(--muted);line-height:1.6;"><span style="color:var(--accent);flex-shrink:0;">▸</span>Cloud infrastructure automation</li>
+              <li style="display:flex;gap:8px;font-size:0.88rem;color:var(--muted);line-height:1.6;"><span style="color:var(--accent);flex-shrink:0;">▸</span>Production operations</li>
+            </ul>
             <div style="display:flex;flex-wrap:wrap;gap:6px;">
-              <span class="tag">ML</span><span class="tag">GCP</span><span class="tag">Cloud Run</span><span class="tag">Automation</span><span class="tag">Python</span>
+              <span class="tag">GCP</span><span class="tag">IAM</span><span class="tag">Monitoring &amp; Logging</span><span class="tag">Incident Response</span><span class="tag">Automation</span>
             </div>
           </div>
         </div>
@@ -904,7 +1123,7 @@
                 <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;">Full-Stack Developer Intern</div>
                 <div style="color:var(--muted);font-size:0.88rem;font-weight:600;margin-top:4px;">MERN Stack Internship &nbsp;·&nbsp; Remote</div>
               </div>
-              <div style="padding:4px 12px;border-radius:100px;background:var(--surface);border:1px solid var(--border);font-size:0.75rem;font-weight:600;color:var(--muted);white-space:nowrap;">2025</div>
+              <div style="padding:4px 12px;border-radius:100px;background:var(--surface);border:1px solid var(--border);font-size:0.75rem;font-weight:600;color:var(--muted);white-space:nowrap;">2023 — 2024</div>
             </div>
             <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;margin-bottom:16px;">Developed a production-ready web-based Finance Expense Tracker with real-time data management, expense categorization, and interactive dashboards. Focused on real-world usability, RESTful API design, and scalable MongoDB data handling.</p>
             <div style="display:flex;flex-wrap:wrap;gap:6px;">
@@ -913,73 +1132,115 @@
           </div>
         </div>
 
-        <!-- Education -->
-        <div class="timeline-item reveal" style="transition-delay:0.2s;">
-          <div style="background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:26px;" class="exp-card">
-            <div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:12px;">
-              <div>
-                <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;">B.E. — Artificial Intelligence & Machine Learning</div>
-                <div style="color:var(--muted);font-size:0.88rem;font-weight:600;margin-top:4px;">University, Bengaluru, India</div>
-              </div>
-              <div style="padding:4px 12px;border-radius:100px;background:var(--surface);border:1px solid var(--border);font-size:0.75rem;font-weight:600;color:var(--muted);white-space:nowrap;">2020 — 2024</div>
-            </div>
-            <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;margin-bottom:16px;">Specialized in machine learning, deep learning architectures, and intelligent systems. Built multiple real-world AI projects spanning computer vision, NLP, and cloud-based automation throughout the program.</p>
-            <div style="display:flex;flex-wrap:wrap;gap:6px;">
-              <span class="tag">AI/ML</span><span class="tag">Deep Learning</span><span class="tag">Computer Vision</span><span class="tag">NLP</span>
-            </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ CERTIFICATIONS ══════════════════════════════════════════════ -->
+  <section id="certifications" style="padding:120px 0;">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="reveal"><div class="section-label mb-5">Credentials</div></div>
+      <h2 class="reveal" style="font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:14px;line-height:1.15;transition-delay:0.1s;">Certifications<br/><span class="accent-text">& credentials</span></h2>
+      <p class="reveal" style="color:var(--muted);font-size:1rem;margin-bottom:48px;max-width:560px;transition-delay:0.15s;">Verified directly from Credly — click any badge to view the live, publicly verifiable credential.</p>
+
+      <!-- Professional Certification -->
+      <div style="font-weight:700;font-size:0.82rem;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;" class="reveal">Professional Certification</div>
+      <a href="https://www.credly.com/badges/d7c3ec83-5678-4fe1-8cdc-032158b75f6b" target="_blank" rel="noopener" class="project-card reveal" style="display:flex;flex-wrap:wrap;align-items:center;gap:28px;padding:32px;margin-bottom:48px;text-decoration:none;color:inherit;transition-delay:0.1s;">
+        <img src="https://images.credly.com/images/08096465-cbfc-4c3e-93e5-93c5aa61f23e/image.png" alt="Google Cloud Associate Cloud Engineer Certification badge" width="104" height="104" style="flex-shrink:0;" loading="lazy">
+        <div style="flex:1;min-width:240px;">
+          <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.15rem;margin-bottom:6px;">Associate Cloud Engineer Certification</h3>
+          <div style="font-size:0.85rem;color:var(--accent);font-weight:600;margin-bottom:10px;">Issued by Google Cloud</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px 18px;font-size:0.8rem;color:var(--muted);margin-bottom:10px;">
+            <span>Issued Dec 3, 2025</span>
+            <span>Expires Dec 3, 2028</span>
+            <span>Credential ID: d7c3ec83-5678-4fe1-8cdc-032158b75f6b</span>
           </div>
+          <span style="display:inline-flex;align-items:center;gap:6px;font-size:0.82rem;color:var(--accent);font-weight:600;">
+            View credential on Credly
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </span>
         </div>
+      </a>
+
+      <!-- Skill Badges -->
+      <div style="font-weight:700;font-size:0.82rem;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" class="reveal">Google Cloud Skill Badges</div>
+      <p class="reveal" style="font-size:0.8rem;color:var(--muted);margin-bottom:20px;max-width:560px;">Hands-on skill badges from Google Cloud Skills Boost — distinct from the certification above, and listed separately rather than as equivalent credentials.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+
+        <a href="https://www.credly.com/badges/2c492e42-abb4-419c-bb98-3865e397c62c" target="_blank" rel="noopener" class="project-card reveal" style="padding:22px 16px;text-align:center;text-decoration:none;color:inherit;display:flex;flex-direction:column;align-items:center;gap:10px;transition-delay:0.1s;">
+          <img src="https://images.credly.com/images/b18154fb-9bd3-47e5-a6f1-554be512947d/image.png" alt="Build Infrastructure with Terraform on Google Cloud Skill Badge" width="64" height="64" loading="lazy">
+          <div style="font-size:0.8rem;font-weight:600;line-height:1.3;">Build Infrastructure with Terraform on Google Cloud</div>
+          <div style="font-size:0.72rem;color:var(--muted);">Issued May 2, 2025</div>
+        </a>
+
+        <a href="https://www.credly.com/badges/9344a1b5-2c01-444b-b894-ce80ed6a8e76" target="_blank" rel="noopener" class="project-card reveal" style="padding:22px 16px;text-align:center;text-decoration:none;color:inherit;display:flex;flex-direction:column;align-items:center;gap:10px;transition-delay:0.15s;">
+          <img src="https://images.credly.com/images/073a27aa-c3d6-44b5-875f-906191666d70/image.png" alt="Create ML Models with BigQuery ML Skill Badge" width="64" height="64" loading="lazy">
+          <div style="font-size:0.8rem;font-weight:600;line-height:1.3;">Create ML Models with BigQuery ML</div>
+          <div style="font-size:0.72rem;color:var(--muted);">Issued Oct 11, 2026</div>
+        </a>
+
+        <a href="https://www.credly.com/badges/adc474bb-0686-42b8-b6f1-a929493087cc" target="_blank" rel="noopener" class="project-card reveal" style="padding:22px 16px;text-align:center;text-decoration:none;color:inherit;display:flex;flex-direction:column;align-items:center;gap:10px;transition-delay:0.2s;">
+          <img src="https://images.credly.com/images/6160e2c1-4a95-4f47-8c5b-f2dde7bb6a67/image.png" alt="Engineer Data for Predictive Modeling with BigQuery ML Skill Badge" width="64" height="64" loading="lazy">
+          <div style="font-size:0.8rem;font-weight:600;line-height:1.3;">Engineer Data for Predictive Modeling with BigQuery ML</div>
+          <div style="font-size:0.72rem;color:var(--muted);">Issued Oct 11, 2026</div>
+        </a>
+
+        <a href="https://www.credly.com/badges/5db30763-6edb-4f1c-9a0b-cad4f96945ea" target="_blank" rel="noopener" class="project-card reveal" style="padding:22px 16px;text-align:center;text-decoration:none;color:inherit;display:flex;flex-direction:column;align-items:center;gap:10px;transition-delay:0.25s;">
+          <img src="https://images.credly.com/images/9a9bd5ca-b41b-41ed-82ad-43968d960f62/blob" alt="Accelerate Development with Antigravity Skill Badge" width="64" height="64" loading="lazy">
+          <div style="font-size:0.8rem;font-weight:600;line-height:1.3;">Accelerate Development with Antigravity</div>
+          <div style="font-size:0.72rem;color:var(--muted);">Issued Oct 6, 2026</div>
+        </a>
 
       </div>
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════════════ TESTIMONIALS ══════════════════════════════════════════════ -->
-  <section id="testimonials" style="padding:120px 0;">
+  <!-- ══════════════════════════════════════════════ EDUCATION ══════════════════════════════════════════════ -->
+  <section id="education" style="padding:120px 0;background:var(--surface);">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="reveal"><div class="section-label mb-5">Testimonials</div></div>
+      <div class="reveal"><div class="section-label mb-5">Education</div></div>
       <h2 class="reveal" style="font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:64px;line-height:1.15;transition-delay:0.1s;">
-        What people<br/><span class="accent-text">say about working with me</span>
+        Academic background<span style="color:var(--accent)">.</span>
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <div class="testimonial-card reveal" style="transition-delay:0.1s;">
-          <div style="color:var(--accent);font-size:1.6rem;line-height:1;margin-bottom:16px;font-family:'Syne',sans-serif;">"</div>
-          <p style="font-size:0.88rem;color:var(--muted);line-height:1.75;margin-bottom:22px;">Shodhan's ability to take a complex AI requirement and deliver a working, production-ready solution is remarkable. The LLM-based automation he built for us saved hours of manual work every week.</p>
-          <div style="display:flex;align-items:center;gap:12px;">
-            <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;color:#000;flex-shrink:0;">RM</div>
-            <div>
-              <div style="font-weight:600;font-size:0.85rem;">Rahul M.</div>
-              <div style="font-size:0.75rem;color:var(--muted);">Senior Engineer, Cloud Ops</div>
+      <div style="display:flex;flex-direction:column;gap:42px;max-width:750px;">
+        <div class="timeline-item reveal" style="transition-delay:0.1s;">
+          <div style="background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:26px;" class="exp-card">
+            <div style="display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:12px;">
+              <div>
+                <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;">B.E. — Artificial Intelligence & Machine Learning</div>
+                <div style="color:var(--accent);font-size:0.88rem;font-weight:600;margin-top:4px;">Mangalore Institute of Technology & Engineering</div>
+              </div>
+              <div style="padding:4px 12px;border-radius:100px;background:rgba(0,229,255,0.08);border:1px solid rgba(0,229,255,0.2);font-size:0.75rem;font-weight:600;color:var(--accent);white-space:nowrap;">2020 — 2024</div>
+            </div>
+            <p style="font-size:0.88rem;color:var(--muted);line-height:1.7;margin-bottom:16px;">Specialized in machine learning, deep learning architectures, and intelligent systems. Built real-world AI projects spanning computer vision, NLP, and cloud-based automation as part of coursework and personal projects. <strong style="color:var(--text);">CGPA: 7.16</strong></p>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+              <span class="tag">AI/ML</span><span class="tag">Deep Learning</span><span class="tag">Computer Vision</span><span class="tag">NLP</span>
             </div>
           </div>
         </div>
-
-        <div class="testimonial-card reveal" style="transition-delay:0.15s;">
-          <div style="color:var(--accent2);font-size:1.6rem;line-height:1;margin-bottom:16px;font-family:'Syne',sans-serif;">"</div>
-          <p style="font-size:0.88rem;color:var(--muted);line-height:1.75;margin-bottom:22px;">Working with Shodhan on the MERN project was a great experience. He's fast, thorough, and always thinks about the end user. The expense tracker he built was clean, intuitive, and exactly what we needed.</p>
-          <div style="display:flex;align-items:center;gap:12px;">
-            <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#7FFF00,var(--accent));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;color:#000;flex-shrink:0;">PK</div>
-            <div>
-              <div style="font-weight:600;font-size:0.85rem;">Priya K.</div>
-              <div style="font-size:0.75rem;color:var(--muted);">Internship Mentor, Full-Stack</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card reveal" style="transition-delay:0.2s;">
-          <div style="color:#7FFF00;font-size:1.6rem;line-height:1;margin-bottom:16px;font-family:'Syne',sans-serif;">"</div>
-          <p style="font-size:0.88rem;color:var(--muted);line-height:1.75;margin-bottom:22px;">Shodhan demonstrates exceptional problem-solving skills in AI. His object detection project showed deep understanding of both theory and practical implementation. A developer who truly understands the full stack of AI systems.</p>
-          <div style="display:flex;align-items:center;gap:12px;">
-            <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--accent2),#7FFF00);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;color:#000;flex-shrink:0;">AS</div>
-            <div>
-              <div style="font-weight:600;font-size:0.85rem;">Dr. Anita S.</div>
-              <div style="font-size:0.75rem;color:var(--muted);">Professor, AI/ML Dept.</div>
-            </div>
-          </div>
-        </div>
-
       </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════ ACHIEVEMENTS ══════════════════════════════════════════════ -->
+  <section id="achievements" style="padding:120px 0;">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="reveal"><div class="section-label mb-5">Achievements</div></div>
+      <h2 class="reveal" style="font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:16px;line-height:1.15;transition-delay:0.1s;">
+        Verified milestones<span style="color:var(--accent)">.</span>
+      </h2>
+      <p class="reveal" style="color:var(--muted);font-size:0.95rem;max-width:560px;margin-bottom:48px;transition-delay:0.12s;">Only achievements that are independently and publicly verifiable are listed here.</p>
+
+      <a href="https://github.com/shodhanshetty06?tab=achievements" target="_blank" rel="noopener" class="project-card reveal" style="display:flex;flex-wrap:wrap;align-items:center;gap:24px;padding:28px;max-width:560px;text-decoration:none;color:inherit;transition-delay:0.15s;">
+        <img src="https://github.githubassets.com/assets/pull-shark-default-498c279a747d.png" alt="GitHub Pull Shark achievement badge" width="72" height="72" style="flex-shrink:0;" loading="lazy">
+        <div style="flex:1;min-width:220px;">
+          <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:6px;">Pull Shark</h3>
+          <div style="font-size:0.85rem;color:var(--accent);font-weight:600;margin-bottom:8px;">GitHub Achievement</div>
+          <p style="font-size:0.85rem;color:var(--muted);line-height:1.6;margin-bottom:10px;">Earned on GitHub for having pull requests merged across repositories.</p>
+          <span style="display:inline-flex;align-items:center;gap:6px;font-size:0.82rem;color:var(--accent);font-weight:600;">View on GitHub <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -997,11 +1258,11 @@
           </p>
           <!-- Direct contact links -->
           <div class="reveal flex flex-col gap-4" style="transition-delay:0.2s;">
-            <a href="mailto:shodhanshetty66@gmail.com" style="display:inline-flex;align-items:center;gap:12px;color:var(--text);text-decoration:none;font-size:0.9rem;font-weight:500;group;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">
+            <a href="mailto:buildwithshodhan06@gmail.com" style="display:inline-flex;align-items:center;gap:12px;color:var(--text);text-decoration:none;font-size:0.9rem;font-weight:500;group;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">
               <div style="width:36px;height:36px;border-radius:9px;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               </div>
-              shodhanshetty66@gmail.com
+              buildwithshodhan06@gmail.com
             </a>
             <a href="https://linkedin.com/in/shodhan-shetty06/" target="_blank" style="display:inline-flex;align-items:center;gap:12px;color:var(--text);text-decoration:none;font-size:0.9rem;font-weight:500;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">
               <div style="width:36px;height:36px;border-radius:9px;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
@@ -1015,6 +1276,12 @@
               </div>
               github.com/shodhanshetty06
             </a>
+            <a href="assets/resume_shodhan.pdf" download="Shodhan_Kumar_Shetty_Resume.pdf" style="display:inline-flex;align-items:center;gap:12px;color:var(--text);text-decoration:none;font-size:0.9rem;font-weight:500;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">
+              <div style="width:36px;height:36px;border-radius:9px;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              </div>
+              Download Resume (PDF)
+            </a>
           </div>
         </div>
 
@@ -1023,28 +1290,31 @@
           <form id="contact-form" onsubmit="handleSubmit(event)" style="display:flex;flex-direction:column;gap:18px;">
             <div class="flex flex-col sm:flex-row gap-4">
               <div style="flex:1;">
-                <label style="display:block;font-size:0.8rem;font-weight:600;margin-bottom:7px;color:var(--muted);letter-spacing:0.03em;">YOUR NAME</label>
-                <input type="text" class="input-field" name="from_name" placeholder="Jane Doe" required />
+                <label for="contact-name" style="display:block;font-size:0.8rem;font-weight:600;margin-bottom:7px;color:var(--muted);letter-spacing:0.03em;">YOUR NAME</label>
+                <input id="contact-name" type="text" class="input-field" name="from_name" placeholder="Jane Doe" required />
               </div>
               <div style="flex:1;">
-                <label style="display:block;font-size:0.8rem;font-weight:600;margin-bottom:7px;color:var(--muted);letter-spacing:0.03em;">EMAIL</label>
-                <input type="email" class="input-field" name="from_email" placeholder="jane@company.com" required />
+                <label for="contact-email" style="display:block;font-size:0.8rem;font-weight:600;margin-bottom:7px;color:var(--muted);letter-spacing:0.03em;">EMAIL</label>
+                <input id="contact-email" type="email" class="input-field" name="from_email" placeholder="jane@company.com" required />
               </div>
             </div>
             <div>
-              <label style="display:block;font-size:0.8rem;font-weight:600;margin-bottom:7px;color:var(--muted);letter-spacing:0.03em;">SUBJECT</label>
-              <input type="text" class="input-field" name="subject" placeholder="Let's build an AI system..." required />
+              <label for="contact-subject" style="display:block;font-size:0.8rem;font-weight:600;margin-bottom:7px;color:var(--muted);letter-spacing:0.03em;">SUBJECT</label>
+              <input id="contact-subject" type="text" class="input-field" name="subject" placeholder="Let's build an AI system..." required />
             </div>
             <div>
-              <label style="display:block;font-size:0.8rem;font-weight:600;margin-bottom:7px;color:var(--muted);letter-spacing:0.03em;">MESSAGE</label>
-              <textarea class="input-field" name="message" rows="5" placeholder="Tell me about your project or idea..." required style="resize:vertical;"></textarea>
+              <label for="contact-message" style="display:block;font-size:0.8rem;font-weight:600;margin-bottom:7px;color:var(--muted);letter-spacing:0.03em;">MESSAGE</label>
+              <textarea id="contact-message" class="input-field" name="message" rows="5" placeholder="Tell me about your project or idea..." required style="resize:vertical;"></textarea>
             </div>
             <button type="submit" class="btn-primary" style="justify-content:center;font-size:0.95rem;padding:14px;">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
               Send Message
             </button>
-            <div id="form-success" style="display:none;text-align:center;padding:14px;border-radius:8px;background:rgba(0,229,255,0.08);border:1px solid rgba(0,229,255,0.2);color:var(--accent);font-size:0.88rem;font-weight:600;">
+            <div id="form-success" role="status" aria-live="polite" style="display:none;text-align:center;padding:14px;border-radius:8px;background:rgba(0,229,255,0.08);border:1px solid rgba(0,229,255,0.2);color:var(--accent);font-size:0.88rem;font-weight:600;">
               ✓ Message sent! I'll get back to you soon.
+            </div>
+            <div id="form-error" role="alert" aria-live="assertive" style="display:none;text-align:center;padding:14px;border-radius:8px;background:rgba(255,77,109,0.08);border:1px solid rgba(255,77,109,0.2);color:var(--accent2);font-size:0.88rem;font-weight:600;">
+              ✗ Couldn't send your message — please try again, or email me directly instead.
             </div>
           </form>
         </div>
@@ -1057,7 +1327,7 @@
     <div class="max-w-6xl mx-auto px-6">
       <div class="flex flex-col md:flex-row items-center justify-between gap-6">
         <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;color:var(--text);">
-          SKS<span style="color:var(--accent)"></span>
+          SKS
         </div>
         <div style="font-size:0.82rem;color:var(--muted);text-align:center;">
           Designed & Engineered by Shodhan Kumar Shetty &nbsp;·&nbsp; Kundapura, India &nbsp;·&nbsp; 
@@ -1120,21 +1390,35 @@
       }
     }
 
+    // ── PROJECT DETAILS TOGGLE ──
+    function toggleDetails(id) {
+      const panel = document.getElementById(id);
+      const btn = document.getElementById(id + '-btn');
+      const open = panel.style.display === 'flex';
+      panel.style.display = open ? 'none' : 'flex';
+      if (btn) btn.querySelector('.chevron').style.transform = open ? 'rotate(0deg)' : 'rotate(180deg)';
+      if (btn) btn.querySelector('.toggle-label').textContent = open ? 'Technical deep dive' : 'Hide technical deep dive';
+    }
+
     // ── MOBILE MENU ──
     let menuOpen = false;
     function toggleMobileMenu() {
       menuOpen = !menuOpen;
       document.getElementById('mobile-menu').classList.toggle('open', menuOpen);
+      document.getElementById('menu-btn').setAttribute('aria-expanded', String(menuOpen));
     }
     function closeMobileMenu() {
       menuOpen = false;
       document.getElementById('mobile-menu').classList.remove('open');
+      document.getElementById('menu-btn').setAttribute('aria-expanded', 'false');
     }
 
     // ── CONTACT FORM ──
     function handleSubmit(e) {
       e.preventDefault();
       const btn = e.target.querySelector('button[type="submit"]');
+      document.getElementById('form-success').style.display = 'none';
+      document.getElementById('form-error').style.display = 'none';
       btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="animation:spin 1s linear infinite"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg> Sending...';
       btn.disabled = true;
 
@@ -1160,7 +1444,7 @@
         })
         .catch((err) => {
           console.error('❌ Email send failed:', err);
-          alert('⚠️ Failed to send: ' + JSON.stringify(err));
+          document.getElementById('form-error').style.display = 'block';
           btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Message';
           btn.disabled = false;
         });
